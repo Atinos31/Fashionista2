@@ -1,108 +1,399 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"> FASHIONISTA </h1><br>
+--------<br>
+[VIEW LIVE SITE]()
 
-Welcome USER_NAME,
+### About 
+This project deals with developing a Virtual website ‘E-commerce Website’ MS4 milestone project for code institute.
+It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent for the order confirmation process. The system is implemented using Python’s web framework Django.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![responsiveimage](Documentation/ResponsiveImage.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+The scope of the project will be limited to some functions of the e-commerce website. It will display products, customers can select catalogs and select products, and can remove products from their cart specifying the quantity of each item. Selected items will be collected in a cart. At checkout, the item on the card will be presented as an order. Customers can pay for the items in the cart to complete an order. This project has great future scope. The project also provides security with the use of login ID and passwords, so that no unauthorized users can access your account. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## TABLE OF CONTENTS
+ * [User Experience UX](#ux-design)
+    * [Bussiness Goals](#goals)
+    * [User Stories](#stories)
+    * [Design](#design) 
+    * [Wireframes](#wireframes)
+  * [Features](#features)
+    * [Existing features](#existing-features)
+    * [Features left to implement](#features-left-to-implement)
+  * [Technologies Used in the project](#technologies)
+    * [Languages](#languages)
+    * [Databases ](#databases)
+    * [Libraries and frameworks](#libraries-and-frameworks)
+    * [Other technologies](#other-technologies)  
+  * [Testing](#testing)
+    * [Code validation](#code-validation)
+    * [Testing User stories](#testing-user-stories)
+    * [Responsiveness and Compatibility](#responsiveness-and-compatibility)
+    * [Testing performance](#testing-performance)
+    * [Testing accessibility](#testing-accessibility)
+    * [known bugs](#known-bugs)
+  * [Deployment](#deployment)
+    * [Deployment of the site](#deployment-of-the-site)
+    * [How to run the code locally](#how-to-run-the-code-locally)
+   * [Credits](#credits)
+     * [Code](#code)
+     * [Content](#content)
+     * [Media](#media)
+     * [Acknowledgment](#acknowledgments)
+     
+-  ## User Experience:
+  -  ## Bussiness Goals
+      * Attractive and accessible website that is responsive on all devices.
+      * Products on the website can be easily modified(add,update,delete) by the admin.
+      * Users can easily register an account
+      * Payments via the website are fully secure.
+      * The website is accessible also by non registered users.
+      * Hold and secure information from all current and new customers so they may login to place orders.
+   - ### User Stories:
+   
+   - #### As a Shopper:
+      1. As a shopper, i want to view a list of products so i can select some to purchase.
+      2. As a shopper,  i would like view individual product details so i can identify the price and  product description.
+      3. As a shopper , i would like to easily identify deals and offers so i can take advantage and save money shopping.
+      4. As a shopper, i would like to the total of my purchases to avoid going over my budget.
+      5. As a shopper, i would like to sort through a list of available products.
+      6. As a shopper, i would like to sort through a specific category of product.
+      7. A a shopper, i would like to search for a product using name or description.
+      8. As a shopper, i would like to easily see the results of my search queries.
+      9. As a shopper, i would like to easily select the size, quantity and color of product i wish to purchase.
+      10. A a shopper,  i would like to be able to view items in my cart to be purchased so i can see the total cost and what i will be receiving.
+      11. As a shopper, i would like to easily adjust the quantity of the items in my cart so i can easily make changes to my purchase before checkout.
+      12. As a shopper , i would like to easily enter my payment information so i can checkout without hassles.
+      13. As a shopper, i would like to  be able to fill in my payment information in a secure and safe way.
+      14. As a shopper, i would like to view my order confirmation before checkout to verify that i havent made any mistakes.
+      15. As a shopper, i would like to receive an email confirmation after checkout so that i can keep the confirmation of what I've purchased for my records.
+      
+   - ### As a site user:
+     1. As a site user, i would like to easily register for an account so i can have a personalised account and can access my profile.
+     2. As a site user, i would like to easily login and logout to access my personal account info.
+     3. As a site user, i would like to easily recover my password incase i forget it so that i can recover access to my account.
+     4. As a site user, i would like to receive an email confirmation after registering to be able to verify that registration was successfull.
+     5. A site user, i would like to have a personalised user profile so that i can view my order history, order confirmation and save my payment information.
+     
+   - ### As a Store Owner:
+     1. As a store owner , i would like to be able to add new products to the store.
+     2. As a store Owner , i would like to be able to edit and update a product from the store.
+     3. As a store owner , i would like to be able to delete a product from the store.
+     
+   ## Design
+     
+   ## Wireframes
+    Wireframes/Database Tables Link - [Wireframes](Documentation/Wireframes/Wireframes.pdf)
+   *Design Changes to Wireframes**
+   
+   
+## Features
 
-Another blue button should appear to click: _Open Browser_.
+### Existing Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Features Left To Implement
 
-A blue button should appear to click: _Make Public_,
+## Technologies Used
 
-Another blue button should appear to click: _Open Browser_.
+* Django
+  * Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. https://www.djangoproject.com/
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* SQlite3 
+   * SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. https://www.sqlite.org/index.html
 
-To log into the Heroku toolbelt CLI:
+* PostgreSQL
+  * PostgreSQL is a powerful, open source object-relational database system. https://www.postgresql.org/
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Gitpod
+  * Gitpod is a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for the web-app. https://www.gitpod.io/
+ 
+* Github
+  * GitHub has been used for version control of the code by using Git functions in the control panel. Github was utilised frequently during the development of the web-app. https://github.com/
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Heroku
+   * This is a cloud based application platform that allows deployment of an application to the web and connection to the database. https://heroku.com/
+  
+* AWS S3 
+  * Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. https://aws.amazon.com/s3/
 
-------
+ * Balsamique
+   * Balsamiq was used to create the wireframes https://balsamiq.com/
+  
+### Front-End Technologies
 
-## Release History
+* HTML 5 
+  * The web-app uses HTML5 as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a 
+better understanding.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* CSS3 
+  * The web-app uses CSS3 for styling of elements within the website. It is linked from the page to the *style.css* file.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Bootstrap4 
+  * The open-source Bootstrap framework has been used to implement the layout of the site. Bootstrap is also utilised 
+to accommodate the responsive and mobile first design of the dashboard. https://getbootstrap.com/
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Django-forms-bootstrap   
+  * A simple bootstrap filter for Django forms. Extracted from the bootstrap theme.
+https://django-bootstrap3.readthedocs.io/en/latest/
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* JavaScript 
+  * The web-app uses Javascript to provide dynamic interactivity, as it is a full-fledged versatile programming language.
+https://www.javascript.com/
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* JQuery 
+   * The web-app uses jQuery, as it simplifies a lot of complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
+https://www.jquery.com/jquery-3.4.1
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* Google Fonts 
+  * The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Back-End Technologies
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Python 
+  * Python emphasises readability, uses English keywords and is highly extensible. The core language itself is quite small, 
+and it is easy to learn for brginners. https://www.python.org/  
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Gunicorn
+   * Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. The Gunicorn server is broadly compatible with 
+various web frameworks, simply implemented, light on server resources, and fairly speedy. https://docs.gunicorn.org/en/stable/
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* Pillow
+   * The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides
+extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities. 
+https://pillow.readthedocs.io/en/stable/handbook/overview.html
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* Psycopg
+   * Psycopg is the most popular PostgreSQL database adapter for the Python programming language. Its main features are 
+the complete implementation of the Python DB API 2.0 specification and the thread safety. https://pypi.org/project/psycopg2/ 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* boto3
+   * Boto is the Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS 
+services, such as EC2 and S3. https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* Jinja 
+   * This is a modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional 
+sandboxed template execution environment. https://jinja.palletsprojects.com/en/2.11.x/
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* Stripe 
+  * Checkout creates a secure, Stripe-hosted payment page that lets you collect payments quickly. It works across devices 
+and is designed to increase conversion. Checkout makes it easy to build a first-class payments experience. 
+https://stripe.com/docs/payments/checkout
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing
 
-------
+### Code validation
+* W3C Markup Validation Service for HTML.
+* W3C CSS Validation Service was used for validating the code.
+* jslint
+* http://pep8online.com/ - For Validation Python Code.
+* Slack - Peer Code Review Forum.
 
-## FAQ about the uptime script
+### Testing User Stories
 
-**Why have you added this script?**
+### Responsive and Campartibility Testing
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Testing Performance
 
-**How will this affect me?**
+### Testing Accessibility
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Deployment
 
-**So….?**
+### Live Website Link
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+### Repository Link
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Running Code Locally
 
-**Anything more?**
+To deploy the project the following is required:-
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Github account
+- Heroku Account
+- AWS Account
+
+To create a clone follow the below steps:- 
+
+Github
+1. Login to github and find the repository.
+2. Click Code and open with Github Desktop.
+3. Follow the prompts in the GitHub Desktop Application.
+
+Heroku Deployment with AWS
+
+1. Install gunicorn, psycopg2-binary and dj-database-url using the PIP Install command.
+2. Freeze all the requirements for the project into a requirements.txt file using the pip3 freeze > requirements.txt command.
+3. Create a procfile, with the following inside it: web: gunicorn pjc_plant_services_ms4.wsgi:application
+4. Push these changes to GitHub, using git add . git commit -m and git push commands.
+5. Navigate to [Heroku](https://www.heroku.com/), and login or create an account.
+6. Once logged in, click on 'resources'.
+7. From the add-ons search bar, add the Heroku Postgres DB, select the free account, and then submit order form to add it to the project.
+8. From the app's dashboard, click on 'settings', and then 'reveal config vars' in order to set the necessary configuration variables for the project. 
+It should look like this: 
+
+| Key                   | Value                      |
+|-----------------------|----------------------------|
+| AWS_ACCESS_KEY_ID     | Your AWS Access Key        |
+| AWS_SECRET_ACCESS_KEY | Your AWS Secret Access Key |
+| DATABASE_URL          | Your Database URL          |
+| EMAIL_HOST_PASS       | Your Email Password        |
+| EMAIL_HOST_USER       | Your Email Address         |
+| SECRET_KEY            | Your Secret Key            |
+| STRIPE_PUBLIC_KEY     | Your Stripe Public Key     |
+| STRIPE_SECRET_KEY     | Your Stripe Secret Key     |
+| STRIPE_WH_SECRET      | Your Stripe WH Key         |
+| USE_AWS               | TRUE                       |
+
+9. Back on the main dashboard, click on 'deploy', and then under the 'Deployment' method section, select GitHub and 'Automatic Deploys'.
+
+10. Ensure that in settings.py, the following code is commented out:
+
+Database
+ https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
+and the following code is added:
+
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+11. Make migrations using the following command:
+python3 manage.py makemigrations
+and migrate the database models to the Postgres database using the following command:
+python3 manage.py migrate
+
+12. New products can be entered via the Django Admin panel or the SQLLite Database can be imported by using the following command
+python3 manage.py loaddata
+
+13. Create a new superuser with the following command:
+python3 manage.py createsuperuser
+and then enter chosen email, username and password.
+
+14. In settings.py, contain the previously entered database setting in an if statement, and add an else condition, so that different databases are 
+used depending on the environment.
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+15. Disable 'COLLECTSTATIC' with the fillowing code: heroku config:set DISABLE_COLLECTSTATIC=1
+so that Heroku doesn't attempt to collect the static files.
+16. Add ALLOWED_HOSTS = ['pjc-plant-services-ms4.herokuapp.com', 'localhost', '127.0.0.1'] to settings.py.
+17. Add Stripe environment variables to settings.py.
+18. Push to Heroku using the following command:
+    git push heroku master
+
+Amazon Web Services:
+
+All Static and media files for the deployed version of the site are hosted in a Amazon Web Services(AWS) S3 bucket. 
+In order to create your own bucket, please follow the instructions on the AWS website 
+[Here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
+
+1. In the gitpod terminal, install boto3 and django-storages using the following commands:
+   pip3 install boto3 and pip3 install django-storages
+2. Freeze the new requirements into the 'requirements.txt' file using the pip3 freeze > requirements.txt command
+3. Add 'storages' to INSTALLED_APPS in settings.py.
+4. Add the following code to settings.py in order to link the AWS bucket to the website:
+
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'ms4-pjc-plant-services'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+5. Create a custom_storages.py file in the root level of the project. Inside it, include the locations of the Static Storage and Media Storage.
+6. Delete DISABLE_COLLECTSTATIC from the Heroku Config Variables.
+7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
+
+Making a Local Clone:
+In order to make a local clone of the PJC Plant Services website, enter git clone https://github.com/MattMoore050783/MS4-PJC-Plant-Services into the terminal. 
+
+Next, create an .env.py file in the root directory of the project, and add it to the .gitignore file. 
+The following code needs to be added to the .env.py file:
+
+import os  
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret Key>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"   
+
+Then make sure that the required packages are installed by running the following command: 
+pip install -r requirements.txt
+
+Make migrations and then migrate in order to create a database, by running the following commands:
+python3 manage.py makemigrations and python3 manage.py migrate.
+
+New products can be entered via the Django Admin panel or the SQLLite Database can be imported by using the following command
+python3 manage.py loaddata
+
+Create a superuser with the following command: python3 manage.py createsuperuser and entering your email, username and password.
+
+Run the app by entering the following command:
+python3 manage.py runserver
 
 ---
 
-Happy coding!
+## Credits
+
+### Code
+
+I used the following links to help my coding:-
+- Code Institue task project for setup and linking to AWS.
+- https://stackoverflow.com/ - for various issues when writing queries in Python.
+- https://www.w3schools.com/python/default.asp - for extra help and tuition with Python.
+- https://miniwebtool.com/django-secret-key-generator/ - for generating the secret key
+- https://getbootstrap.com/docs/5.0/getting-started/introduction/ - For help with bootstrap classes
+- http://ami.responsivedesign.is/ - For help with how the site looked on different devices
+- https://dashboard.stripe.com/test/dashboard - For stripe JS Code for my project and webhooks testing
+
+
+### Content
+   This README.md file is based on the Code Institute template.
+
+
+### Media
+
+
+
+### Acknowledgements
+
+Many Thanks to the below for the help and guidances throughout my project:- 
+- My Mentor 
+- Code Institues support team for increasing my hand in date and being supportive.
+- The peercode channel on slack for feedback on my website. 
+- Code Institute and the Boutique-Ado Project
+ 
+
+
+   
+    
