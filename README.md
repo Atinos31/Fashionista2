@@ -82,7 +82,34 @@ The scope of the project will be limited to some functions of the e-commerce web
      2. As a store Owner , i would like to be able to edit and update a product from the store.
      3. As a store owner , i would like to be able to delete a product from the store.
      
-   ## Design
+   ## DESIGN
+   ### STRUCTURE
+  ### Customer Interface:
+     1. Customer shops for a product
+     2. Customer changes quantity
+     3. The customer adds an item to the cart
+     4. Customer views cart
+     5. Customer checks out
+     6. Customer sends order
+
+  * ER diagram for customer
+  ![ER diagram for customer](documents/diagrams/fashionista-1.png)
+
+  * Use-Case diagram for customer
+  ![use-case diagram for customer](documents/diagrams/customer1.png)
+
+  ### Admin Interface:
+    1. Admin logs in
+    2. Admin inserts item
+    3. Admin removes item
+    4. Admin modifies item
+
+  * ER diagram for admin
+  ![ER diagram for customer](documents/diagrams/adminer.png)
+
+  * Use-Case diagram for Admin
+  ![use-case diagram for customer](documents/diagrams/adminuc.png)
+
      
    ## Wireframes
     Wireframes/Database Tables Link - [Wireframes](Documentation/Wireframes/Wireframes.pdf)
@@ -117,6 +144,12 @@ The scope of the project will be limited to some functions of the e-commerce web
   
 * AWS S3 
   * Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. https://aws.amazon.com/s3/
+
+* Figma 
+   * Figma was used to create use-case diagrams
+
+pdf2png site was used to convert pdf files to png [pdf2png](https://pdf2png.com/)
+
 
  * Balsamique
    * Balsamiq was used to create the wireframes https://balsamiq.com/
@@ -335,7 +368,7 @@ if 'USE_AWS' in os.environ:
 7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
 
 Making a Local Clone:
-In order to make a local clone of the PJC Plant Services website, enter git clone https://github.com/MattMoore050783/MS4-PJC-Plant-Services into the terminal. 
+In order to make a local clone of the PJC Plant Services website, enter git clone https://github.com/Atinos31/Fashionista2 into the terminal. 
 
 Next, create an .env.py file in the root directory of the project, and add it to the .gitignore file. 
 The following code needs to be added to the .env.py file:
