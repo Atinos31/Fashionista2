@@ -92,8 +92,9 @@ The scope of the project will be limited to some functions of the e-commerce web
      5. Customer checks out
      6. Customer sends order
 
-  * ER diagram for customer
-  ![ER diagram for customer](documents/diagrams/fashionista-1.png)
+  Database schema
+  ![multiproduct database](documents/diagrams/database.png)
+
 
   * Use-Case diagram for customer
   ![use-case diagram for customer](documents/diagrams/customer1.png)

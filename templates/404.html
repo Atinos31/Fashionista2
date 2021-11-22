@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 offset-md-2 text-center">
+                <p class="main-text">Whoops, looks like the page you requested cannot be 
+                    found on our server.<br>
+                    Click <a class="anchors" href="{% url 'home' %}">here</a> to return to the main site.
+                </p>
+                <img src="{{ MEDIA_URL }}404.png" alt="404 image" id="error-img" class="img-fluid">
+            </div>
+        </div>
+    </main>
+{% endblock %}

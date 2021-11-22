@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 offset-md-2 text-center">
+                <p class="main-text">Whoops, looks like something went wrong.<br>
+                    Click <a class="anchors" href="{% url 'home' %}">here</a> to return to the main site.
+                </p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

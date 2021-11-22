@@ -3,11 +3,10 @@ html{
 }
 
 body{
-    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background: url('/media/homepage1.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 165px);
-    color:crimson;
-    font-family: Lato;
+    height: calc(100vh - 164px);
+    font-family:  'Roboto Slab', serif;
 }
 
 /* from Bulma*/
@@ -21,16 +20,41 @@ body{
 
 .logo-font{
     text-transform:uppercase;
+    font-family: 'Merriweather', serif;
+
+    
 }
+
+.text-black{
+    color:#000 !important;
+}
+
+.delivery-banner{
+    background: #fff;
+}
+.bg-black{
+    background:#000!important;
+    height: 50px;
+    width: 100%;
+}
+
+.fa-shipping-fast{
+    color:#ffc702;
+}
+
 
 .main-logo-link{
     width:fit-content;
 }
 
+.header-font{
+    text-transform:uppercase;
+    font-family: 'Estonia', cursive;
+}
 .shop-now-button{
     background:#000;
     color:#fff;
-    min-width: 260px;
+    min-width: 240px;
 }
 
 .btn-black{
@@ -41,9 +65,9 @@ body{
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.butn-black:hover,
-.butn-black:active,
-.butn-black:focus{
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus{
     background:#222;
     color:#aaa;
 }
@@ -51,6 +75,27 @@ body{
 .border-black{
     border: 1px solid #000 !important;
 }
+
+.btn-floating:hover,
+.btn-floating:active,
+.btn-floating:focus{
+    background:rgb(241, 233, 233);
+    color:#111;
+}
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+/*---------------------------footer------------------*/
+   
 
 /*---------------------------------media queries-------------------*/
 

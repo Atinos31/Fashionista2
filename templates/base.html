@@ -8,6 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="Description" content="A fashion e-commerce platform, mainly foccuses on womens wear,but it also offers men's apparel, children's clothes, accessories, shoes, bags and other fashion items">
+        <meta name="keywords" content="fashion, women, men, children, accessories,shoes, bags">
+        <meta name="author" content="Sandra Atino">
         
     {% endblock %}
 
@@ -16,8 +19,15 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Merriweather:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -37,10 +47,15 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
+       <div id="delivery-banner" class="row  text-center">
+  <div class="col bg-black text-white">
+    <h4 class="logo-font my-1"><i class="fas fa-shipping-fast"></i> Free Standard shipping on orders over ${{ free_shipping_threshold}}!</h4>
+  </div>
+</div>
+      <div class="row bg-light bg-gradient pt-lg-2 d-none d-lg-flex" id="topnav">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-black my-0">Fashionista</h2>
+            <h2 class="logo-font text-black my-0"><strong>Fashion</strong>ista</h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -48,7 +63,7 @@
             <div class="input-group w-100">
               <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search for item...">
               <div class="input-group-append">
-                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                <button class="form-control btn btn-black border-black rounded-0" type="submit">
                   <span class="icon">
                     <i class="fas fa-search"></i>
                   </span>
@@ -99,12 +114,24 @@
             </li>
           </ul>
         </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
       </div>
+<div class="row bg-white">
+  <nav class="navbar navbar-expand-lg navbar-light w-100">
+    <button class="navbar-toggler" typer="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {% include 'includes/mobile-top-header.html' %}
+    {% include 'includes/main-nav.html' %}
+  </nav>
+</div>
     </header>
-
+    
+   
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
+
 
     {% block page_header %}
     {% endblock %}
@@ -112,9 +139,51 @@
     {% block content %}
     {% endblock %}
 
+<!-- Footer -->
+<footer class="bg-transparent text-center text-white fixed-bottom">
+  <!-- Grid container -->
+  <div class="container p-2 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-2">
+      <!-- Facebook -->
+      <a class="btn  btn-floating m-1" style="background:white; color:#3b5998;" href="https://www.facebook.com/sandra.rock.182" role="button" 
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn  btn-outline-light m-1"  style="background:white; color:#55acee;" href="https://twitter.com/atinos31" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" style="background:white; color:#e95950;" href="https://www.instagram.com/amaritechworld/" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1"  style="background:white; color: #007bb5;"href="https://www.linkedin.com/in/sandra-a-459a231a9/" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" style="background:white; color:black;" href="https://github.com/Atinos31" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+     Copyright ©
+    <a class="text-white" href="https://github.com/Atinos31">Sandra Atino</a> 2021
+  </div>
+  <!-- Copyright -->
+</footer>
+
     {% block postloadjs %}
     {% endblock %}
 
-    
   </body>
 </html>
