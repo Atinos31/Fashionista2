@@ -1,30 +1,87 @@
-{% extends "base.html" %}
+
+{% extends 'base.html' %}
 {% load static %}
+{% block title %}
+Home
+{% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="header-container">
     <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
 
+
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h2 class="display-4 logo-font text-black">
-                The latest fashion and style trends
-            </h2>
+<!-- Landing Page -->
+    <div class="container-fluid homepage">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h3 class="display-4 logo-font text-black">
+                    Latest style and fashion trends
+                </h3>
             <div class="my-5">
                 <h4>
-                    <a href="" class="shop-now-button btn btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                 </h4>
             </div>
         </div>
     </div>
+    </div>
+    
+   <!-- Latest Arrivals -->
+    <div class="container-fluid latest-trends bg-trends">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center text-uppercase">Special Deals</h2>
+            </div> 
+               
+        </div>
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="card item border-0">
+                    <a href="#!">
+                        <span class="notify-badge">-70%</span>
+                        <img class="card-img" src="{% static 'media/man.jpg'%}" alt="image for men's category">
+                    </a>
+                    <div class="card-body pb-0 text-center la-name">
+                <h4>
+                        <a href="" class="cta-button btn btn-ls btn-lg rounded-1">Men</a>
+                    
+                </h4>
+            
+                    </div>
+                </div>
+            </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+             <div class="card item border-0">
+                    <a href="#!">
+                         <span class="notify-badge">-50%</span>
+                        <img class="card-img" src="{% static 'media/kids.jpg'%}" alt="image for kidss category">
+                     </a>
+                    <div class="card-body pb-0 text-center la-name">
+                        <a href="" class="cta-button btn btn-ls btn-lg rounded-1">Kids</a>
+                    </div>
+                </div>
+            </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="card item border-0">
+                <a href="#!">
+                     <span class="notify-badge">-40%</span>
+                    <img class="card-img" src="{% static 'media/girl.jpg'%}" alt="image for womens's category">
+                </a>
+                <div class="card-body pb-0 text-center la-name">
+                    <a href="" class="cta-button btn btn-ls btn-lg rounded-1"> Women</a>
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>  
+<div>
+    <hr class="mt-2">
 </div>
+    
 
 {% endblock %}

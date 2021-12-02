@@ -18,23 +18,26 @@
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- bootstrap link-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--   google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Merriweather:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
+        <!-- main css -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <!-- favicon-->
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+        <!-- favicon-->
+        <link href="{% static 'media/favicon.png' %}" rel="shortcut icon" type="image/x-icon">
+
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+        <!--font awesome-->
         <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <!-- jquery link-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -43,7 +46,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Fashionista {% block extra_title %}{% endblock %}</title>
+    <title>Fashionista {% block extra_title %} Latest fashion and style trends{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -55,13 +58,13 @@
       <div class="row bg-light bg-gradient pt-lg-2 d-none d-lg-flex" id="topnav">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-black my-0"><strong>Fashion</strong>ista</h2>
+            <h2 class="logo-font text-black my-0"><i class="fas fa-store" style="color:rgb(70, 12, 146);"></i> <strong>Fashion</strong>ista</h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <form action="" method="GET">
             <div class="input-group w-100">
-              <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search for item...">
+              <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="What are you searching for?">
               <div class="input-group-append">
                 <button class="form-control btn btn-black border-black rounded-0" type="submit">
                   <span class="icon">
@@ -74,7 +77,18 @@
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            
             <li class="list-inline-item dropdown">
+              <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-heart fa-lg"></i>
+                  </div>
+                  <p class="my-0">WishList</p>
+                </div>
+              </a>
+
+               <li class="list-inline-item dropdown">
               <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div>
@@ -83,6 +97,7 @@
                   <p class="my-0">My Account</p>
                 </div>
               </a>
+
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
@@ -123,8 +138,11 @@
     </button>
     {% include 'includes/mobile-top-header.html' %}
     {% include 'includes/main-nav.html' %}
+  
+    
   </nav>
 </div>
+ 
     </header>
     
    
@@ -139,48 +157,10 @@
     {% block content %}
     {% endblock %}
 
-<!-- Footer -->
-<footer class="bg-transparent text-center text-white fixed-bottom">
-  <!-- Grid container -->
-  <div class="container p-2 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-2">
-      <!-- Facebook -->
-      <a class="btn  btn-floating m-1" style="background:white; color:#3b5998;" href="https://www.facebook.com/sandra.rock.182" role="button" 
-        ><i class="fab fa-facebook-f"></i
-      ></a>
 
-      <!-- Twitter -->
-      <a class="btn  btn-outline-light m-1"  style="background:white; color:#55acee;" href="https://twitter.com/atinos31" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" style="background:white; color:#e95950;" href="https://www.instagram.com/amaritechworld/" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1"  style="background:white; color: #007bb5;"href="https://www.linkedin.com/in/sandra-a-459a231a9/" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" style="background:white; color:black;" href="https://github.com/Atinos31" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-     Copyright ©
-    <a class="text-white" href="https://github.com/Atinos31">Sandra Atino</a> 2021
-  </div>
-  <!-- Copyright -->
-</footer>
+  {% include 'includes/footer.html' %}
+</body>
+</html>
 
     {% block postloadjs %}
     {% endblock %}

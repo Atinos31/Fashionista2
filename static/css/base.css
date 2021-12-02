@@ -1,12 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 html{
     height:100%;
 }
 
 body{
-    background: url('/media/homepage1.jpg') no-repeat center center fixed;
+   /* background: url('/media/homepage1.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 164px);*/
     font-family:  'Roboto Slab', serif;
+    background-color: #f8f9fa;
+}
+
+
+.text-center{
+text-align: center!important;
 }
 
 /* from Bulma*/
@@ -21,8 +32,14 @@ body{
 .logo-font{
     text-transform:uppercase;
     font-family: 'Merriweather', serif;
+    cursor: pointer;
 
     
+}
+.display-4{
+  font-family:  'Roboto Slab', serif;
+  font-weight: normal;
+ 
 }
 
 .text-black{
@@ -54,12 +71,19 @@ body{
 .shop-now-button{
     background:#000;
     color:#fff;
-    min-width: 240px;
+    min-width: 220px;
+    cursor: pointer;
+    
+}
+
+.btn{
+    cursor: pointer;
 }
 
 .btn-black{
     background:#000;
     color:#fff;
+    cursor: pointer;
 }
 
 .shop-now-button:hover,
@@ -69,7 +93,7 @@ body{
 .btn-black:active,
 .btn-black:focus{
     background:#222;
-    color:#aaa;
+    color:#fff;
 }
 
 .border-black{
@@ -82,20 +106,76 @@ body{
     background:rgb(241, 233, 233);
     color:#111;
 }
-.page-container {
-  position: relative;
-  min-height: 100vh;
+
+.cta-button {
+    background:#ffc702;
+    color: black;
+    min-width: 120px;
+}
+.cta-button:hover,
+.cta-button:active,
+.cta-button:focus
+ {
+    background: #222;
+    color: white;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;            /* Footer height */
+
+
+
+/* -------------HomePage -----------------*/
+.homepage {
+    background: url('/static/media/homepage1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-bottom: 4.5rem;
+    height: calc(100vh - 164px);
+    overflow-x: hidden; 
 }
+
+/*-------------------------------trends area----------------------*/
+.latest-trends {
+    background-color: #fff;
+    padding: 30px;
+}
+.card-img {
+    object-fit: contain;
+}
+.la-name {
+    margin-top: -85px;
+   
+}
+
+/*-------------- notification badge-----------*/
+.item{
+    position:relative;
+    padding-top:20px;
+    display:inline-block;
+}
+.notify-badge{
+    position: absolute;
+    right:-15px;
+    top:10px;
+    background: linear-gradient(135deg, hsla(227, 100%, 50%, 0.8) 31%, hsla(271, 100%, 69%, 1) 63%);
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 8px;
+    font-size:20px;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0037FF", endColorstr="#B361FF", GradientType=1 );
+}
+
+/*--------------------------product page-------------------*/
+
+
+
+
+
 
 /*---------------------------footer------------------*/
-   
+footer{
+    margin:0;
+    width:100%;
+}
 
 /*---------------------------------media queries-------------------*/
 
