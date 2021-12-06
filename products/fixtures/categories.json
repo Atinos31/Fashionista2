@@ -72,7 +72,7 @@
         }
     },
      {
-        "pk": 9,
+        "pk": 10,
         "model": "products.category",
         "fields": {
             "name": "dresses",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "pk": 9,
+        "pk": 11,
         "model": "products.category",
         "fields": {
             "name": "pants",
@@ -88,7 +88,7 @@
         }
     },
     {
-        "pk": 9,
+        "pk": 12,
         "model": "products.category",
         "fields": {
             "name": "accesories",

@@ -1,8 +1,9 @@
 {% load static %}
 <!-- Footer -->
-<footer class="bg-dark text-center text-white container-fluid">
+{% block page_footer %}
+<footer class="bg-dark text-center text-white container-fluid footer-container">
  
-  <div class="p-4">
+  <div class="p-2">
     <!-- Section: Social media -->
     <section class="mb-4">
       
@@ -147,3 +148,4 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+{% endblock %}

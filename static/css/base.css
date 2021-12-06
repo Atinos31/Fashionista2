@@ -1,3 +1,5 @@
+/*------------------------------global styles-----------------------*/
+
 *{
     margin:0;
     padding:0;
@@ -9,10 +11,10 @@ html{
 
 body{
    /* background: url('/media/homepage1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);*/
+    background-size: cover;*/
+    height: calc(100vh - 164px);
     font-family:  'Roboto Slab', serif;
-    background-color: #f8f9fa;
+    background-color: #fff;
 }
 
 
@@ -158,7 +160,7 @@ text-align: center!important;
     background: linear-gradient(135deg, hsla(227, 100%, 50%, 0.8) 31%, hsla(271, 100%, 69%, 1) 63%);
     text-align: center;
     border-radius: 30px 30px 30px 30px;
-    color:white;
+    color:#fff;
     padding:5px 8px;
     font-size:20px;
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0037FF", endColorstr="#B361FF", GradientType=1 );
@@ -166,7 +168,15 @@ text-align: center!important;
 
 /*--------------------------product page-------------------*/
 
-
+.overlay{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:fixed;
+    background: #fff;
+    z-index:-1;
+}
 
 
 
@@ -175,6 +185,7 @@ text-align: center!important;
 footer{
     margin:0;
     width:100%;
+    position: sticky;
 }
 
 /*---------------------------------media queries-------------------*/
@@ -203,5 +214,16 @@ footer{
 
 }
 
+/*--------------------------------pad the top bit when navbar is collapsed on mobile-----------------*/
+
+@media (max-width: 991px){
+    .header-container{
+        padding-top:116px;
+    }
+   
+    body{
+        height:calc(100vh - 116px);
+    }
+}
 
 
