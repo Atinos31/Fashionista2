@@ -9,6 +9,3 @@ def index(request):
     return render(request, 'home/index.html')
 
 
-def productPage(request):
-    """ A view to return the product page """
-    return render(request, 'home/product.html')
