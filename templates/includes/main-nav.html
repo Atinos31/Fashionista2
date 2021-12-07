@@ -5,9 +5,9 @@
                  All Products <i class="fas fa-caret-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -47,7 +47,7 @@
                 </a>
                 <a href="{% url 'products' %}?category=baby" class="dropdown-item">Babies
                 </a>
-                 <a href="{% url 'products' %}?category=boys, girls" class="dropdown-item">All clothing
+                 <a href="{% url 'products' %}?category=boys, girls, baby" class="dropdown-item">All clothing
                 </a>
             </div>
         </li>
@@ -58,10 +58,8 @@
             <div class="dropdown-menu border-0" aria-labelledby="accesories-link">
                 <a href="{% url 'products' %}?category=bags" class="dropdown-item">Women Bags</a>
                 <a href="{% url 'products' %}?category=jewelry-and-watches" class="dropdown-item">Jewelry &amp; Watches</a>
-                <a href="{% url 'products' %}?category=belts" class="dropdown-item">Belts</a>
-                <a href="{% url 'products' %}?category=scarfs" class="dropdown-item">Scarfs</a>
                 <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
-                <a href="{% url 'products' %}?category=handbags, sunglasses, belts, scarfs " class="dropdown-item">All accesories</a>
+                <a href="{% url 'products' %}?category=bags,shoes,jewelry-and-watches" class="dropdown-item">All accesories</a>
             </div>
         </li>
         <li class="nav-item dropdown">
