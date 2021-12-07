@@ -17,11 +17,11 @@
                 Women
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="women-link">
-                <a href="" class="dropdown-item">Outwear</a>
-                <a href="" class="dropdown-item">Dresses</a>
-                <a href="" class="dropdown-item">Bottoms</a> 
-                <a href="" class="dropdown-item">Tops</a> 
-                <a href="" class="dropdown-item">All clothing</a>
+                <a href="{% url 'products' %}?category=outwear" class="dropdown-item">Outwear</a>
+                <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
+                <a href="{% url 'products' %}?category=bottoms" class="dropdown-item">Bottoms</a> 
+                <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a> 
+                <a href="{% url 'products' %}?category=outwear,dresses,bottoms,tops" class="dropdown-item">All clothing</a>
                 
             </div>
         </li>
@@ -30,10 +30,10 @@
                 Men
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="men-link">
-                <a href="" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="" class="dropdown-item">Jeans</a>
-                <a href="" class="dropdown-item">Shirts</a>
-                <a href="" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
+                <a href="{% url 'products' %}?category=mens-jeans" class="dropdown-item">Jeans</a>
+                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
+                <a href="{% url 'products' %}?category=activewear,essentials, mens-jeans, shirts" class="dropdown-item">All Clothing</a>
             </div>
         </li>
          <li class="nav-item dropdown">
@@ -41,24 +41,27 @@
                 Kids
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="kids-link">
-                <a href="" class="dropdown-item">Boys
+                <a href="{% url 'products' %}?category=boys" class="dropdown-item">Boys
                 </a>
-                <a href="" class="dropdown-item">Girls
+                <a href="{% url 'products' %}?category=girls" class="dropdown-item">Girls
                 </a>
-                 <a href="" class="dropdown-item">All clothing
+                <a href="{% url 'products' %}?category=baby" class="dropdown-item">Babies
+                </a>
+                 <a href="{% url 'products' %}?category=boys, girls" class="dropdown-item">All clothing
                 </a>
             </div>
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="accesories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accesories and Shoes
+                Shoes &amp; Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accesories-link">
-                <a href="" class="dropdown-item">Handbags</a>
-                <a href="" class="dropdown-item">Sunglasses</a>
-                <a href="" class="dropdown-item">Belts</a>
-                <a href="" class="dropdown-item">Scarfs</a>
-                <a href="" class="dropdown-item">All accesories</a>
+                <a href="{% url 'products' %}?category=bags" class="dropdown-item">Women Bags</a>
+                <a href="{% url 'products' %}?category=jewelry-and-watches" class="dropdown-item">Jewelry &amp; Watches</a>
+                <a href="{% url 'products' %}?category=belts" class="dropdown-item">Belts</a>
+                <a href="{% url 'products' %}?category=scarfs" class="dropdown-item">Scarfs</a>
+                <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                <a href="{% url 'products' %}?category=handbags, sunglasses, belts, scarfs " class="dropdown-item">All accesories</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -66,10 +69,10 @@
                 Homeware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accesories-link">
-                <a href="" class="dropdown-item">Kitchen & Dinning</a>
-                <a href="" class="dropdown-item">Bed & Bath</a>
+                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
+                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
               
-                <a href="" class="dropdown-item">All homeware</a>
+                <a href="{% url 'products' %}?category=bed_bath, kitchen_dining" class="dropdown-item">All homeware</a>
             </div>
         </li>
 

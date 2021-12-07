@@ -48,7 +48,7 @@ Home
                     
                     <div class="card-body pb-0 text-center la-name">
                 <h4>
-                        <a href="#men.html" class="cta-button btn btn-ls btn-lg rounded-1">Men</a>
+                        <a href="{% url 'products' %}?category=deals-men" class="cta-button btn btn-ls btn-lg rounded-1">Men</a>
                     
                 </h4>
             
@@ -62,7 +62,7 @@ Home
                         <img class="card-img" src="{% static 'media/kids.jpg'%}" alt="image for kidss category">
                     
                     <div class="card-body pb-0 text-center la-name">
-                        <a href="#kid.html" class="cta-button btn btn-ls btn-lg rounded-1">Kids</a>
+                        <a href="{% url 'products' %}?category=deals-kids" class="cta-button btn btn-ls btn-lg rounded-1">Kids</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ Home
                     <img class="card-img" src="{% static 'media/girl.jpg'%}" alt="image for womens's category">
                 
                 <div class="card-body pb-0 text-center la-name">
-                    <a href="#women.html" class="cta-button btn btn-ls btn-lg rounded-1"> Women</a>
+                    <a href="{% url 'products' %}?category=deals-women" class="cta-button btn btn-ls btn-lg rounded-1"> Women</a>
                 </div>
              </div>
         </div>
