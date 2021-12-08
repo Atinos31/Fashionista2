@@ -53,7 +53,7 @@ text-align: center!important;
 }
 .bg-black{
     background:#000!important;
-    height: 50px;
+    height: 50%;
     width: 100%;
 }
 
@@ -114,6 +114,7 @@ text-align: center!important;
     color: black;
     min-width: 120px;
 }
+
 .cta-button:hover,
 .cta-button:active,
 .cta-button:focus
@@ -178,7 +179,14 @@ text-align: center!important;
     z-index:-1;
 }
 
-
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
 
 
 /*---------------------------footer------------------*/

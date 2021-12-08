@@ -225,6 +225,14 @@ https://stripe.com/docs/payments/checkout
 * Slack - Peer Code Review Forum.
 
 ### Testing User Stories
+* users can log in and out of the site
+* users can register an acount
+*  both unregistered and registered users can browse through all product
+* clicking on any individual categories takes us to the specific categories
+* users can browse through deals in different categories, women, men and kids.
+* users can sort items by price, rating and category.
+* dropdown box updates when a criteria is chosen from the navbar
+* search funtionality works and returns the query result searched for
 
 ### Responsive and Campartibility Testing
 
