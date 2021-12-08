@@ -51,6 +51,7 @@ The scope of the project will be limited to some functions of the e-commerce web
       * Payments via the website are fully secure.
       * The website is accessible also by non registered users.
       * Hold and secure information from all current and new customers so they may login to place orders.
+
    - ### User Stories:
    
    - #### As a Shopper:
@@ -69,6 +70,10 @@ The scope of the project will be limited to some functions of the e-commerce web
       13. As a shopper, i would like to  be able to fill in my payment information in a secure and safe way.
       14. As a shopper, i would like to view my order confirmation before checkout to verify that i havent made any mistakes.
       15. As a shopper, i would like to receive an email confirmation after checkout so that i can keep the confirmation of what I've purchased for my records.
+      16.  As a shopper, i would like to  products that i like to my wishlist.
+      17.  As a shopper, i would like read reviews drom other shoppers about cetrain products that i am interested in.
+      18.  As a shopper, i would like to able to write reviews on a product i purchased.
+
       
    - ### As a site user:
      1. As a site user, i would like to easily register for an account so i can have a personalised account and can access my profile.
@@ -120,9 +125,21 @@ The scope of the project will be limited to some functions of the e-commerce web
 ## Features
 
 ### Existing Features
+* customer registers for an account
+* customer signs in and out of site
+* Customer shops for a product
+* Customer changes quantity
+* The customer adds an item to the cart
+* Customer views cart
+* Customer checks out
+* customer deletes item from the shopping cart
+* customer updates an items in the shopping cart , delete or change sizes.
+* customer selects sizes if the item has size options.
+* Customer adds product to a wishlist
+* customer can scroll back to the top of the page products-page
 
 ### Features Left To Implement
-
+* image variations for a particular item
 ## Technologies Used
 
 * Django
@@ -230,7 +247,7 @@ https://stripe.com/docs/payments/checkout
 *  both unregistered and registered users can browse through all product
 * clicking on any individual categories takes us to the specific categories
 * users can browse through deals in different categories, women, men and kids.
-* users can sort items by price, rating and category.
+* users can sort items by price, rating,category and name
 * dropdown box updates when a criteria is chosen from the navbar
 * search funtionality works and returns the query result searched for
 
