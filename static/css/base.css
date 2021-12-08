@@ -203,6 +203,9 @@ a.category-badge > span.badge:hover {
     cursor:pointer;
 }
 
+.fa-star{
+    color:#be980b;
+}
 .fa-arrow-up{
     color:grey!important;
 }

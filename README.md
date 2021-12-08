@@ -10,8 +10,21 @@ It provides the user with a list of the various products available for purchase 
 
 
 The scope of the project will be limited to some functions of the e-commerce website. It will display products, customers can select catalogs and select products, and can remove products from their cart specifying the quantity of each item. Selected items will be collected in a cart. At checkout, the item on the card will be presented as an order. Customers can pay for the items in the cart to complete an order. This project has great future scope. The project also provides security with the use of login ID and passwords, so that no unauthorized users can access your account. 
+ # BASIC FOUNDAMENTAL PIECES
+ The three basic parts of our database will be a: user, product, and order.
+  ## Building the user
+The user is the first foundational piece. The user interacts with the THE online store. In the online store you have products. As the user clicks through the products, they eventually decide to purchase a few of those products. When a user selects a product they add that to their order.
+The basic foundational pieces of a user is a: name, password and email address. I create a user to save their information so they can keep track of their purchases and payment options.
+In our database, we don’t directly save a product to a user. We do that through an order. The order is what keeps track of the products. Therefore, a user has many products through and order.
 
+## Building the Product
+The product is the second foundational piece. The online store has many products. Each product needs a few important pieces of information such as: name, description, price ,rating and category. As more products are added to the store, information is registered based on these characters.
+As a user selects products to purchase, that information is saved through an order and not directly to the user. The reason being is that a product can belong to many users, not just one user. If there would be no order, there would be no way to allow other users to buy the product. Therefore, a product has many users through an order.
+This will allow the products to be easily sorted through in the store for users.
 
+## Building the Order
+The order is the last foundational piece.  an order is the main transactional piece that allows users to interact with products through the store. The main foundational pieces of an order are: User ID foreign key, Product ID foreign key and the total amount of all the products.
+As a user checks out of the store, this is what will allow the database to process the user and the products that, that user will be purchasing. By storing all the necessary information in an order, the database saves an instance of an interaction of a user with the stores products. The order item can have product details that allows the product to be customized by size and/or color.
 
 ## TABLE OF CONTENTS
  * [User Experience UX](#ux-design)
