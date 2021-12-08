@@ -257,7 +257,9 @@ https://stripe.com/docs/payments/checkout
 
 ### Testing Accessibility
 
-
+## known bugs
+* btt-link hidden not showing once on the bottom of the page - solved with a z-index on btt-button and border color change.
+* footer doesnt stick to bottom on empty pages.
 
 ## Deployment
 

@@ -193,13 +193,19 @@ a.category-badge > span.badge:hover {
     height:42px;
     width:42px;
     position:fixed;
-    bottom:10px;
+    bottom:20px;
     right:10px;
+    border: 2px solid grey!important;
+    z-index: 999;
 
 }
 
 .btt-link{
     cursor:pointer;
+}
+
+.fa-arrow-up{
+    color:grey!important;
 }
 
 /*---------------------------footer------------------*/
