@@ -197,7 +197,6 @@ a.category-badge > span.badge:hover {
     right:10px;
     border: 2px solid grey!important;
     z-index: 999;
-
 }
 
 .btt-link{
@@ -207,6 +206,22 @@ a.category-badge > span.badge:hover {
 .fa-arrow-up{
     color:grey!important;
 }
+
+/*--------------product-detail page------------------------------*/
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus{
+    background: #000;
+    color:#fff!important;
+}
+
 
 /*---------------------------footer------------------*/
 footer{
