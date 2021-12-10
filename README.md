@@ -1,15 +1,26 @@
 <h1 align="center"> FASHIONISTA </h1><br>
---------<br>
-[VIEW LIVE SITE]()
 
-### About 
-This project deals with developing a Virtual website ‘E-commerce Website’ MS4 milestone project for code institute.
-It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent for the order confirmation process. The system is implemented using Python’s web framework Django.
+--------<br>
 
 ![responsiveimage](Documentation/ResponsiveImage.png)
+[View the live site here :]()
 
+## OVERVIEW
+Fashionista has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
+Fashionista is a virtual 'E-commerce Website’It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent for the order confirmation process. The system is implemented using Python’s web framework Django.
 
-The scope of the project will be limited to some functions of the e-commerce website. It will display products, customers can select catalogs and select products, and can remove products from their cart specifying the quantity of each item. Selected items will be collected in a cart. At checkout, the item on the card will be presented as an order. Customers can pay for the items in the cart to complete an order. This project has great future scope. The project also provides security with the use of login ID and passwords, so that no unauthorized users can access your account. 
+The scope of the project will be limited to some functions of the e-commerce website.
+* customers can register for an account that way thye may log , make purchases and view their order history.
+* The project provides security with the use of login ID and passwords, so that no unauthorized users can access your account. 
+* It will display products,
+* customers can select categories and select products, and can remove products from their cart specifying the quantity of each item. Selected items will be collected in a cart. At checkout, the item on the card will be presented as an order.
+Customers can pay for the items in the cart to complete an order. - * stripe credit card payment is real but reamisn in test mode so no payments can be taken, * DO NOT USE YOUR REAL CREDIT CARD DETAILS*
+- Please usee the following details to make a stripe payment.
+  * Card: Number 4242 4242 4242 4242
+  * Date: Any future date
+  * CVC : Any 3 numbers
+   
+
  # BASIC FOUNDAMENTAL PIECES
  The three basic parts of our database will be a: user, product, and order.
   ## Building the user
@@ -26,38 +37,42 @@ This will allow the products to be easily sorted through in the store for users.
 The order is the last foundational piece.  an order is the main transactional piece that allows users to interact with products through the store. The main foundational pieces of an order are: User ID foreign key, Product ID foreign key and the total amount of all the products.
 As a user checks out of the store, this is what will allow the database to process the user and the products that, that user will be purchasing. By storing all the necessary information in an order, the database saves an instance of an interaction of a user with the stores products. The order item can have product details that allows the product to be customized by size and/or color.
 
-## TABLE OF CONTENTS
- * [User Experience UX](#ux-design)
-    * [Bussiness Goals](#goals)
-    * [User Stories](#stories)
-    * [Design](#design) 
-    * [Wireframes](#wireframes)
-  * [Features](#features)
-    * [Existing features](#existing-features)
-    * [Features left to implement](#features-left-to-implement)
-  * [Technologies Used in the project](#technologies)
-    * [Languages](#languages)
-    * [Databases ](#databases)
-    * [Libraries and frameworks](#libraries-and-frameworks)
-    * [Other technologies](#other-technologies)  
-  * [Testing](#testing)
-    * [Code validation](#code-validation)
-    * [Testing User stories](#testing-user-stories)
-    * [Responsiveness and Compatibility](#responsiveness-and-compatibility)
-    * [Testing performance](#testing-performance)
-    * [Testing accessibility](#testing-accessibility)
-    * [known bugs](#known-bugs)
-  * [Deployment](#deployment)
-    * [Deployment of the site](#deployment-of-the-site)
-    * [How to run the code locally](#how-to-run-the-code-locally)
-   * [Credits](#credits)
-     * [Code](#code)
-     * [Content](#content)
-     * [Media](#media)
-     * [Acknowledgment](#acknowledgments)
+# TABLE OF CONTENTS
+## 1. [User Experience (UX)](#ux-design)
+   * [Strategy](#strategy)
+   * [Scope](#scope) 
+   * [Structure](#structure)
+   * [Strategy](#strategy)
+   * [Skeleton](#skeleton)
+   * [Surface](#surface)
+## 2.[Information Architecture](#information-architecture)
+   * [Database](#database)
+   * [Data Model](#data-model)
+## 3.[Technologies Used in the project](#technologies)
+  * [Languages](#languages)
+  * [Databases ](#databases)
+  * [Libraries and frameworks](#libraries-and-frameworks)
+  * [Other technologies](#other-technologies)  
+## 4.[Testing](#testing)
+  * [Code validation](#code-validation)
+  * [Testing User stories](#testing-user-stories)
+  * [Responsiveness and Compatibility](#responsiveness-and-compatibility)
+  * [Testing performance](#testing-performance)
+  * [Testing accessibility](#testing-accessibility)
+  * [known bugs](#known-bugs)
+## 5.[Deployment](#deployment)
+  * [Deployment of the site](#deployment-of-the-site)
+  * [How to run the code locally](#how-to-run-the-code-locally)
+## 6.[Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+## 7.[Acknowledgment](#acknowledgments)
      
--  ## User Experience:
-  -  ## Bussiness Goals
+## [USER EXPERIENCE (UX)](#ux-design)
+- ## [Strategy](#strategy)
+
+  -  ## [Business Goals](#business-goals)
       * Attractive and accessible website that is responsive on all devices.
       * Products on the website can be easily modified(add,update,delete) by the admin.
       * Users can easily register an account
@@ -65,7 +80,7 @@ As a user checks out of the store, this is what will allow the database to proce
       * The website is accessible also by non registered users.
       * Hold and secure information from all current and new customers so they may login to place orders.
 
-   - ### User Stories:
+   - ### [User Stories](#user-stories):
    
    - #### As a Shopper:
       1. As a shopper, i want to view a list of products so i can select some to purchase.
@@ -100,9 +115,114 @@ As a user checks out of the store, this is what will allow the database to proce
      2. As a store Owner , i would like to be able to edit and update a product from the store.
      3. As a store owner , i would like to be able to delete a product from the store.
      
-   ## DESIGN
-   ### STRUCTURE
-  ### Customer Interface:
+## [SCOPE](#scope)
+The key features of the website is developed based on the user stories:
+### For any site user:
+ * Homepage with a revealing bg-image to easily help users understand the purpose of the site.
+ * Products page where users can view all items based on their query searches as well.
+ * Product Detail page with detailed information about the particular product, here users can choose size and quantity before adding item to cart.
+ * Shopping cart page , where the user can view what product they added to their cart.
+ * Checkout page, allowing users to purchase products.
+ * Confirmation page , allowing users to see a confirmation message of their order
+ * Contact page , where the users can contact the company with any questions .
+ * Newsletter subscribe form that can allow users to sign up and get updates from the company.
+ *  sign up page where users can register to be able to veiw purchase history and have a customer account
+ * About us page , where users can find out more information about the company
+
+## For registered users:
+* Profile page, where users can update the default delivery information allowing ease of checkout.
+* Order History, Users can see their previous order they made from the profile page
+* wishlist page , where users can store their favourite items in the wishlist.
+* product reviews, on the product detail page , where the users can leave a reating and message about a product they bought.
+* Log out page, where users can securely log out of their page.
+
+### For Store Owner:
+  1. As a store owner , i would like to be able to add new products to the store.
+  2. As a store Owner , i would like to be able to edit and update a product from the store.
+  3. As a store owner , i would like to be able to delete a product from the store.
+  4. as a store owner, i would like to be able to delete reviews from users who have left reviews
+
+## [STRUCTURE](#structure)
+## Existing Features
+### Allauth features
+The sign up, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to suit the needs of the site.
+#### Admin Features
+  * Admin will have access to additional features across the site. Firstly admin members will have an additional icon in the delivery banner (on larger devices) or link in the burger menu (on smaller devices) to take the user to the site admin page. Here the admin user will have access to:
+  * Add a product page link - This will take the admin user to the add product page. Here the user can fill in the form to add a product to the site. Once added the admin user will be taken to the product detail page for the product added.
+  * Manage Contact Messages - This will take the admin user to the contact management page. Here admin users will be displayed with all the queries that have been submitted by other users. Admin users can view details of these messages by clicking on the name in the table. On both the contact management page and the contact detail page admin users can delete the messages once they have responded to the user. This will trigger a modal to make sure the user is happy to delete the message.
+  * On the product page and product detail page admin users will have access to the edit and delete product icons. The edit icon will take the user to the edit product form, where they can make changes to a product (i.e put in the women's category). The delete icon will trigger a modal to make sure the user wishes to delete the product and avoid accidental deletions.
+### Base Template
+* Delivery Banner - The delivery banner contains information about free delivery and the free delivery threshold. It is fixed to the top of the screen to allow for ease of access and improved user navigation. The links take users to different parts of the site which are as follows:
+ * Unregistered user:
+   * Login link
+   * Register link
+ * Registered user:
+   * Wishlist
+   * Profile
+   * Log Out
+### Navbar
+### Footer
+### Homepage
+### Product page
+### product detail page
+### Toasts Messages
+  * Toast message boxes have been used through out the site to display the feedback to the user when they have made interactions with the site. These messages are color coded to transmit different kinds of information:
+    * Green: Success
+    * Red : Errors
+    * Blue : Informative
+    * Yellow : Warning
+### shopping cart  page
+  The shopping cartg page can be broken into 5 parts for each product added to their cart:
+  * Product - which displays an image of the product the user has added to their bag.
+  * Product info - displays the name of the product, product sku and the product size (if applicable).
+  * Price - displays the individual product price.
+  * Quantity - Users are able to update their order using the quantity selectors and the update button. Users can also remove that product from their shopping cart entirely by clicking the remove button.
+  * Subtotal - displays the subtotal for each product (product price * quantity).
+Underneath the products that are in the user's cart, there is information for cart total, delivery and grand total. If a user does not meet the free delivery threshold a helpful message will be displayed to let them know what they need to spend in order to qualify for free delivery.
+  * There is a button to take the users back to the all product page, and a "Secure Checkout" button to take the user to the checkout page.
+  * If the user has no items in the shopping cart, a message is displayed to the user to let them know this and a button to take the user to the all products page is displayed.
+### Checkout page
+The Checkout page is split into two columns on larger devices, and 2 rows on smaller devices:
+ * Order Summary - Gives a nice overview of each of the products that they are purchasing. Images are links that will take the user back to the product details page for that product. Users can also see a breakdown of the order total, delivery and grand total.
+ * Checkout Form - split into 3 sections:
+   * Details - where users are invited to fill out their full name and email address. Email address will be auto populated if a user has logged in and saved this information to their profile.
+   * Delivery - Users can fill in where they wish their products to be delivered to. These fields will be auto populated if a user has logged in and saved this information to their profile.
+   * Payment - Users can enter their card details here in order to make payments and purchase their chosen products.
+ * Below the checkout form, users can click the "Adjust cart" button to make adjustments to their shopping cart, or click the "Complete Order" button to make their purchases. Users are informed exactly how much they will be charged with a helpful message directly underneath the "Complete Order" button.
+ ### Checkout success page
+ * When a user successfully checks out a success toast will be shown to the user with the order number and a confirmation email will be sent to the user with some of the details of their order.
+ * The checkout success page itself is split into two sections:
+   * Order information which details the order info, delivery details and billing info.
+   * Order Summary - Gives a nice overview of each of the products that they are purchasing. Images are links that will take the user back to the product details page for that product.
+ * More products link which will take the user back to the all products page encouraging the user to make more purchases.
+ ### About us page
+  * Users can find out more about the company by clicking the about us link under the company dropdown (on larger devices), or within the burger menu.
+  * Users are greeted with a hero image with the company mantra about the products.
+
+ ### Contact us page
+  * Users can find different ways to contact the company on the contact page. Details for the company address, telephone, email and opening times can be found here.
+  * The next section on this page allows users to contact the company using the form provided. Once the user submits a valid form a success message is displayed to the user to provide feedback and an email confirmation is sent to the user to let them know that we have received their query.
+   * Contact messages can be located on the site administration page (for superusers only).
+ ### Profile page
+   * Here users can update their default information by filling in the form and clicking update info button allowing them to ease purchases at checkout.
+   * Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .
+ ### Wishlist page
+  * This page will only be available to logged in users. if the user has not added any products to their wishlist then the user will be informed about this and a link to all_products page is displayed.
+  * When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
+### Features left to implement
+  * image variations for a particular item
+
+* Superuser:
+   * Site Administration
+   * Wishlist
+   * Profile
+   * Log Out
+
+## [Skeleton](#skeleton)
+Below you may find the links for my wireframs , showing how i wish the pages to be structured and how th esite will appear on different screen sizes.
+The wireframes have been created using balsamique and show for desktop , ipad and iphone.
+
+ ### Customer Interface:
      1. Customer shops for a product
      2. Customer changes quantity
      3. The customer adds an item to the cart
@@ -134,26 +254,11 @@ As a user checks out of the store, this is what will allow the database to proce
     Wireframes/Database Tables Link - [Wireframes](Documentation/Wireframes/Wireframes.pdf)
    *Design Changes to Wireframes**
    
-   
-## Features
 
-### Existing Features
-* customer registers for an account
-* customer signs in and out of site
-* Customer shops for a product
-* Customer changes quantity
-* The customer adds an item to the cart
-* Customer views cart
-* Customer checks out
-* customer deletes item from the shopping cart
-* customer updates an items in the shopping cart , delete or change sizes.
-* customer selects sizes if the item has size options.
-* Customer adds product to a wishlist
-* customer can scroll back to the top of the page products-page
 
-### Features Left To Implement
-* image variations for a particular item
-## Technologies Used
+## [Surface](#surface)
+ design- colour choice
+# [Technologies Used In The Project](#technologies)
 
 * Django
   * Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. https://www.djangoproject.com/

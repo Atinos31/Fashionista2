@@ -51,6 +51,7 @@ text-align: center!important;
 .delivery-banner{
     background: #fff;
 }
+
 .bg-black{
     background:#000!important;
     height: 50%;
@@ -60,7 +61,6 @@ text-align: center!important;
 .fa-shipping-fast{
     color:#ffc702;
 }
-
 
 .main-logo-link{
     width:fit-content;
@@ -74,8 +74,10 @@ text-align: center!important;
     background:#000;
     color:#fff;
     min-width: 220px;
-    cursor: pointer;
     
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    transition: .5s linear;  
 }
 
 .btn{
@@ -94,8 +96,8 @@ text-align: center!important;
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus{
-    background:#222;
-    color:#fff;
+    background:#003838;
+    color:#fff;    
 }
 
 .border-black{
@@ -113,6 +115,9 @@ text-align: center!important;
     background:#ffc702;
     color: black;
     min-width: 120px;
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    transition: .5s linear;
 }
 
 .cta-button:hover,
@@ -135,6 +140,8 @@ text-align: center!important;
     overflow-x: hidden; 
 }
 
+
+
 /*-------------------------------trends area----------------------*/
 .latest-trends {
     background-color: #fff;
@@ -142,11 +149,17 @@ text-align: center!important;
 }
 .card-img {
     object-fit: contain;
+    -webkit-transition: all .5s cubic-bezier(.85,0,.15,1);
+    -o-transition: all .5s cubic-bezier(.85,0,.15,1);
+    transition: all .5s cubic-bezier(.85,0,.15,1);
 }
 .la-name {
     margin-top: -85px;
    
 }
+
+
+
 
 /*-------------- notification badge-----------*/
 .item{
