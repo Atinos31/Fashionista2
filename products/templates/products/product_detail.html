@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}
-Product detail.
+{% block extra_title %}
+Product detail
 {% endblock %}
 
 {% block page_header %}
@@ -113,4 +113,9 @@ Product detail.
 
 {% block page_footer %}
 {% include 'includes/footer.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
