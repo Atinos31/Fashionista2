@@ -238,6 +238,12 @@ a.category-badge > span.badge:hover {
     color:#fff!important;
 }
 
+/*----------------------------------- cart page------------------*/
+
+.update-link,
+.remove-item{
+    cursor:pointer;
+}
 
 /*---------------------------footer------------------*/
 footer{
