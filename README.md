@@ -162,7 +162,9 @@ The sign up, register, password reset, email confirmation pages etc, have all be
    * Log Out
 ### Navbar
 ### Footer
+The footer has all the important shop links .
 ### Homepage
+The home page hs a background the navigation links, logo, hero image, call to action button,deals categorised men,women children section and the footer.
 ### Product page
 ### product detail page
 ### Toasts Messages
@@ -561,7 +563,7 @@ I used the following links to help my coding:-
 
 
 ### Media
-
+ images used are from the same boutique ado project although they have been full catergorised.
 
 
 ### Acknowledgements
