@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load bag_tools %}
 {% block extra-title %} shopping page{% endblock%}
 
 
@@ -53,7 +54,7 @@
                                 
                             </td>
                             <td class="py-3 w-25">
-                                <form action="" method="POST" class=" form update-form">
+                                <form action="{% url 'adjust_cart' item.item_id%}" method="POST" class=" form update-form">
                                     {% csrf_token %}
                                      <div class="form-group">
                                     <div class="input-group">
@@ -84,10 +85,10 @@
                                 </div>
                                 </form>
                                 <a class="update-link text-info"><small>Update</small></a>
-                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data_size="{{ item.size }}"><small>Remove</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data_product_size="{{ item.size }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">€{{ item.product.price }}</p>
+                                <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                             
                             </td>
                             </tr>
