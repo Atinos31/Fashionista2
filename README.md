@@ -362,14 +362,22 @@ https://stripe.com/docs/payments/checkout
 * Slack - Peer Code Review Forum.
 
 ### Testing User Stories
+* Admin(superuser) can log in, add categories, add products, delete categories, delete products, modify products,delete orders .
+* Non registered users can use the site but at checkout need to fillout their email and adress deatails.
 * users can log in and out of the site
-* users can register an acount
-*  both unregistered and registered users can browse through all product
+* users can register  for an acount
+* both unregistered and registered users can browse through all products
 * clicking on any individual categories takes us to the specific categories
 * users can browse through deals in different categories, women, men and kids.
 * users can sort items by price, rating,category and name
+* users can choose specific product sizes and quantity.
+* users may update the product either by chnging sizes or adding the quantiy or even deleting the product from their cart.
 * dropdown box updates when a criteria is chosen from the navbar
 * search funtionality works and returns the query result searched for
+* users can proceed with payment and recieve a confirmation message.
+* after purchase users can click the link for latest deals to take them to the latest deals page.
+* an error is thrown when the wrong postcode ,card digits and card expiry date are entered i the checkout  payment form.
+* success toast confirmation message pops up after an order is passed,with a specific order number and informing buyer of which email the order details shall be sent to.
 
 ### Responsive and Campartibility Testing
 
@@ -379,7 +387,7 @@ https://stripe.com/docs/payments/checkout
 
 ## known bugs
 * btt-link hidden not showing once on the bottom of the page - solved with a z-index on btt-button and border color change.
-* footer doesnt stick to bottom on empty pages.
+* footer doesnt stick to bottom on empty pages. solved with class of stickiy 
 
 ## Deployment
 

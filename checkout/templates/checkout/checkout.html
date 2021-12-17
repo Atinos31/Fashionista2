@@ -88,7 +88,7 @@
                         {{ order_form.town_or_city | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
-                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.province | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
 								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
@@ -107,7 +107,10 @@
                         <div class="mb-3" id="card-element"></div>
 
                         <!-- Used to display form errors -->
+                        <!-- pass the client intent to the view to get the payment intent -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <input type="hidden" value="{{client_secret }}" name="client_secret">
+
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
