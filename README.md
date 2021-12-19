@@ -375,7 +375,7 @@ https://stripe.com/docs/payments/checkout
 * dropdown box updates when a criteria is chosen from the navbar
 * search funtionality works and returns the query result searched for
 * users can proceed with payment and recieve a confirmation message.
-* after purchase users can click the link for latest deals to take them to the latest deals page.
+* after purchase users can click the link for latest deals to take them to the latest deals page or to the user's profile page.
 * an error is thrown when the wrong postcode ,card digits and card expiry date are entered i the checkout  payment form.
 * success toast confirmation message pops up after an order is passed,with a specific order number and informing buyer of which email the order details shall be sent to.
 
