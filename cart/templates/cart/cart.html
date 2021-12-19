@@ -84,8 +84,8 @@
                                     </div>
                                 </div>
                                 </form>
-                                <a class="update-link text-info"><small>Update</small></a>
-                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data_product_size="{{ item.size }}"><small>Remove</small></a>
+                                <a class="update-link text-info"><small><i class="fas fa-edit fa-lg"></i> Update</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data_product_size="{{ item.size }}"><small><i class="fas fa-trash-alt fa-lg"></i> Delete</small></a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>

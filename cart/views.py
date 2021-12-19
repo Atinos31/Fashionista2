@@ -81,7 +81,7 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping cart"""
+    """Delete the item from the shopping cart"""
     try:
         product = Product.objects.get(pk=item_id)
         size = None
@@ -93,16 +93,16 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-                messages.success(request, f'Removed size {size.upper()} {product.name} from your cart')
+                messages.success(request, f'Deleted size {size.upper()} {product.name} from your cart')
 
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your cart')
+            messages.success(request, f'Deleted {product.name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'error removing item: {e}')
+        messages.error(request, f'error deleting item: {e}')
         return HttpResponse(status=500)
 
