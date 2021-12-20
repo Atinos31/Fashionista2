@@ -4,8 +4,10 @@
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="mb-4 text-uppercase">{% trans "Sign Out" %}</h2>
+<hr>
 
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -17,5 +19,5 @@
   <button type="submit">{% trans 'Sign Out' %}</button>
 </form>
 
-
+<hr class="mt-4">
 {% endblock %}
