@@ -389,8 +389,8 @@ https://stripe.com/docs/payments/checkout
 ## known bugs
 * btt-link hidden not showing once on the bottom of the page - solved with a z-index on btt-button and border color change.
 * footer doesnt stick to bottom on empty pages. solved with class of stickiy 
-* email confirmation bug - i checked the endpoint url , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page.checked the webhook handler.py file, --not solved.
-
+* email confirmation bug - i checked the endpoint urls both in stripe and gitpod , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page,restarted workspace.checked the webhook handler.py file,  fixed
+* 401 stripe webhook error - changed port 8000 to public
 
 ## Deployment
 

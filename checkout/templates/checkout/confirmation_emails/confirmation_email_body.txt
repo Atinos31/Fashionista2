@@ -1,4 +1,4 @@
-Hello {{ order.username }}
+Hello {{ order.full_name }}
 
 This is a confirmation of your order at Fashionista. Your order information is below
 
