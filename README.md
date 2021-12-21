@@ -158,20 +158,37 @@ The sign up, register, password reset, email confirmation pages etc, have all be
    * Register link
  * Registered user:
    * Wishlist
-   * Profile
-   * Log Out
+   * My Account - Profile, Logout
+   * Cart
+ * Admin/ superuser
+   * Wishlist
+   * My Account - Product Management, Profile, Logout
 ### Navbar
+The navbar has all product category links,
+* All Products - here products may be sorted and selected based on price, name, rating or category
+* women - has several categories
+* Men - has several categories
+* Kids - has several categories
+* Shoes and accesories - has several categories
+* Homeware - has several categories
 ### Footer
 The footer has all the important shop links .
 ### Homepage
 The home page hs a background the navigation links, logo, hero image, call to action button,deals categorised men,women children section and the footer.
 ### Product page
+The product page displays all products in the store.
+The number of products is display right above.
+The sorting range button is also displayed here to allow the users sort products based on price, rating, name and category.
 ### product detail page
+   The product details page includes, name of the product, price , category, rating and product description.
+   The user may choose size and quantity they wish to purchase.
+   There are also two button links one to keep shopping that leads to the all products page and the other add to cart button that adds the product to the user's cart.
+   Admin/ superuser has two links to delete or modify product .
 ### Toasts Messages
   * Toast message boxes have been used through out the site to display the feedback to the user when they have made interactions with the site. These messages are color coded to transmit different kinds of information:
     * Green: Success
     * Red : Errors
-    * Blue : Informative
+    * Blue : Information
     * Yellow : Warning
 ### shopping cart  page
   The shopping cartg page can be broken into 5 parts for each product added to their cart:
@@ -213,6 +230,8 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
   * When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
 ### Features left to implement
   * image variations for a particular item
+  * contact page
+
 
 * Superuser:
    * Site Administration
