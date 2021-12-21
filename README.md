@@ -378,7 +378,8 @@ https://stripe.com/docs/payments/checkout
 * after purchase users can click the link for latest deals to take them to the latest deals page or to the user's profile page.
 * an error is thrown when the wrong postcode ,card digits and card expiry date are entered i the checkout  payment form.
 * success toast confirmation message pops up after an order is passed,with a specific order number and informing buyer of which email the order details shall be sent to.
-
+* profile details are saved, making it easier for a registered user to complete their purchase without prefilling the adress details.
+* when a non test card is used for stripe payment, wronf postal code and not a future date is used, an error message is receieved  clearly informing you of the error and how to fix it.
 ### Responsive and Campartibility Testing
 
 ### Testing Performance
@@ -388,6 +389,8 @@ https://stripe.com/docs/payments/checkout
 ## known bugs
 * btt-link hidden not showing once on the bottom of the page - solved with a z-index on btt-button and border color change.
 * footer doesnt stick to bottom on empty pages. solved with class of stickiy 
+* email confirmation bug - i checked the endpoint url , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page.checked the webhook handler.py file, --not solved.
+
 
 ## Deployment
 
