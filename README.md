@@ -578,15 +578,18 @@ I used the following links to help my coding:-
 
 
 ### Media
- images used are from the same boutique ado project although they have been full catergorised.
+ some images used are from the boutique ado project although they have been full catergorised.
+ some images are from google with a licence "all creative commons" 
+ trends-area images are from freepik -free usage licence.
 
 
 ### Acknowledgements
 
 Many Thanks to the below for the help and guidances throughout my project:- 
 - My Mentor 
-- Code Institues support team for increasing my hand in date and being supportive.
+- Code Institues tutor for increasing my hand in date and being supportive.
 - The peercode channel on slack for feedback on my website. 
+- Student care for offerind me more time when i requested it.
 - Code Institute and the Boutique-Ado Project
  
 
