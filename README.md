@@ -391,6 +391,7 @@ https://stripe.com/docs/payments/checkout
 * footer doesnt stick to bottom on empty pages. solved with class of stickiy 
 * email confirmation bug - i checked the endpoint urls both in stripe and gitpod , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page,restarted workspace.checked the webhook handler.py file,  fixed
 * 401 stripe webhook error - changed port 8000 to public
+* admin can add products
 
 ## Deployment
 
