@@ -380,6 +380,9 @@ https://stripe.com/docs/payments/checkout
 * success toast confirmation message pops up after an order is passed,with a specific order number and informing buyer of which email the order details shall be sent to.
 * profile details are saved, making it easier for a registered user to complete their purchase without prefilling the adress details.
 * when a non test card is used for stripe payment, wronf postal code and not a future date is used, an error message is receieved  clearly informing you of the error and how to fix it.
+* admin can add products to the store
+* admin cn edit/modify products in the store
+* alert message warning admin about editing a product.
 ### Responsive and Campartibility Testing
 
 ### Testing Performance
@@ -391,7 +394,7 @@ https://stripe.com/docs/payments/checkout
 * footer doesnt stick to bottom on empty pages. solved with class of stickiy 
 * email confirmation bug - i checked the endpoint urls both in stripe and gitpod , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page,restarted workspace.checked the webhook handler.py file,  fixed
 * 401 stripe webhook error - changed port 8000 to public
-* admin can add products
+
 
 ## Deployment
 
