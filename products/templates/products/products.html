@@ -92,8 +92,13 @@
                                     {% else %}
                                     <small class="text-muted">No rating</small>
                                     {% endif %}
-                                    
-
+                                    {% if request.user.is_authenticated%}
+                                    <p>
+                                        <a href="{% url 'add_to_favourite' product.id %}">
+                                            <i class="far fa-heart fa-lg text-black hvr-grow"></i>
+                                        </a>
+                                    </p>
+                                    {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a>
