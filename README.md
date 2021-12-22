@@ -264,7 +264,9 @@ The wireframes have been created using balsamique and show for desktop , ipad an
   * Use-Case diagram for Admin
   ![use-case diagram for customer](documents/diagrams/adminuc.png)
 
-     
+### Product-user-wishlist
+  * This is a one to one relationship that links the customer to the products.  
+ 
    ## Wireframes
     Wireframes/Database Tables Link - [Wireframes](Documentation/Wireframes/Wireframes.pdf)
    *Design Changes to Wireframes**

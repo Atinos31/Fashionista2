@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
-    'wishlist',
+    'favourite'
+    
     # other
     'crispy_forms',
   
@@ -114,7 +115,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
 WSGI_APPLICATION = 'fashionista.wsgi.application'
 
 
