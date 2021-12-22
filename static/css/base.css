@@ -242,6 +242,25 @@ input[name='q']::placeholder{
     color:#fff!important;
 }
 
+/*---------------- product form-----------*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
 /*----------------------------------- cart page------------------*/
 
 .update-link,

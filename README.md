@@ -225,19 +225,13 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
  ### Profile page
    * Here users can update their default information by filling in the form and clicking update info button allowing them to ease purchases at checkout.
    * Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .
- ### Wishlist page
-  * This page will only be available to logged in users. if the user has not added any products to their wishlist then the user will be informed about this and a link to all_products page is displayed.
+ ### Wishlist
+  * The wishlists app allows signed-in users to create one or more wishlists. A user can add a product to their wishlist from the $ product detail page and manage their lists in the account section.
   * When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
 ### Features left to implement
   * image variations for a particular item
   * contact page
 
-
-* Superuser:
-   * Site Administration
-   * Wishlist
-   * Profile
-   * Log Out
 
 ## [Skeleton](#skeleton)
 Below you may find the links for my wireframs , showing how i wish the pages to be structured and how th esite will appear on different screen sizes.
@@ -339,6 +333,9 @@ https://www.jquery.com/jquery-3.4.1
 * Google Fonts 
   * The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
+* Hover css
+  * hover css has been used as animation for the image hover to improve the UI. https://ianlunn.github.io/Hover/#effects
+
 ### Back-End Technologies
 
 * Python 
@@ -402,6 +399,7 @@ https://stripe.com/docs/payments/checkout
 * admin can add products to the store
 * admin cn edit/modify products in the store
 * alert message warning admin about editing a product.
+* When a user who is not a superuser tries to access add,edit,delete page via url, a message is displayed informing the user that "only store owners can do that"
 ### Responsive and Campartibility Testing
 
 ### Testing Performance
