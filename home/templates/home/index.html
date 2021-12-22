@@ -13,15 +13,15 @@ Home
 </div>
 {% endblock %}
 
-
 {% block content %}
 <!-- Landing Page -->
     <div class="container-fluid homepage">
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto">
-                <h3 class="display-4 logo-font text-black">
-                    Latest fashion and style trends
-                </h3>
+                <h4 class="display-4 homepage-font text-black">
+                    Latest Fashion Trends
+                </h4>
+            
             <div class="my-5">
                 <h4>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
@@ -30,7 +30,6 @@ Home
         </div>
     </div>
     </div>
-    
    <!-- Latest Arrivals -->
     <div class="container-fluid latest-trends bg-trends">
         <div class="row">
@@ -59,7 +58,7 @@ Home
              <div class="card item border-0">
                     
                          <span class="notify-badge">-50%</span>
-                        <img class="card-img" src="{% static 'media/kids.jpg'%}" alt="image for kidss category">
+                        <img class="card-img" src="{% static 'media/kids.jpg'%}" alt="image for kids category">
                     
                     <div class="card-body pb-0 text-center la-name">
                         <a href="{% url 'products' %}?category=deals-kids" class="cta-button btn btn-ls btn-lg rounded-1">Kids</a>
@@ -83,5 +82,4 @@ Home
     <hr class="mt-0">
 </div>
     
-
 {% endblock %}

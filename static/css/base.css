@@ -135,12 +135,13 @@ text-align: center!important;
 .homepage {
     background: url('/static/media/homepage1.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin-bottom: 4.5rem;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 150px);
     overflow-x: hidden; 
 }
 
-
+.homepage-font{
+    margin-top:4.5rem;
+}
 
 /*-------------------------------trends area----------------------*/
 .latest-trends {
