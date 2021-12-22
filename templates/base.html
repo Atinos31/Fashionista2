@@ -54,7 +54,7 @@
   <body>
     <header class="container-fluid fixed-top">
        <div id="delivery-banner" class="row  text-center">
-  <div class="col bg-black text-white">
+       <div class="col bg-black text-white">
     <h4 class="my-2"><i class="fas fa-shipping-fast"></i> Free Standard shipping on orders over €{{ free_delivery_threshold}}!</h4>
   </div>
 </div>
@@ -78,18 +78,25 @@
             </div>
           </form>
         </div>
+    
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             
-            <li class="list-inline-item dropdown">
-              <a href="{% url 'favourite'%}" class="text-black nav-link">
-                <div class="text-center hvr-grow">
+            <li class="list-inline-item">
+              <a href="{% url 'favourite' %}" class="text-black nav-link">
+                <div class="text-center">
                   <div>
-                    <i class="far fa-heart fa-lg"></i>
+                    <i class="fas fa-heart fa-lg hvr-grow"></i>
                   </div>
-                  <p class="my-0">Wishlist</p>
+                  <p class="my-0"> Wishlist
+                    {% if favourite %}
+                        ${{ favourite }}
+      
+                    {% endif %}
+                  </p>
                 </div>
               </a>
+            </li>
 
                <li class="list-inline-item dropdown">
               <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

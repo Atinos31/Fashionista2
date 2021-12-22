@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from profiles.models import UserProfile
 from products.models import Product
+
+from django.contrib import messages
 from .models import Favourite
 
 
@@ -26,28 +28,31 @@ def favourite(request):
 @login_required
 def add_to_favourite(request, product_id):
     """
-    Add a product from the store to 
-    favourites for the logged in user
-    """
-    product = get_object_or_404(Product, pk=product_id)
-
-    favourite = Favourite.objects.get_or_create(user=request.user)
-    favourite.product.add(product)
-
-
-
-@login_required
-def add_to_favourite(request, product_id):
-    """
     Add a product from the store to the
     wishlist for the logged in user
     """
     product = get_object_or_404(Product, pk=product_id)
 
-    # Create a wishlist for the user if they don't have one
+    # Create favourites for the user if they don't have one
     favourite, _ = Favourite.objects.get_or_create(user=request.user)
-    # Add product to the wishlist
+    # Add product to the favourites
     favourite.products.add(product)
-    messages.info(request, "A new product was added to your wishlist")
+    messages.info(request, 'A new product was added to your wishlist')
+
+    return redirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def remove_from_favourite(request, product_id):
+    """
+    Add a product from the store to the
+    favourite for the logged in user
+    """
+    favourite = Favourite.objects.get(user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Remove product from the favourites
+    favourite.products.remove(product)
+    messages.info(request, "A product was removed from your favourites")
 
     return redirect(request.META.get('HTTP_REFERER'))
