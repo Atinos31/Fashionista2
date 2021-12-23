@@ -19,6 +19,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """ product model """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
@@ -32,9 +33,17 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
 class ProductReview(models.Model):
-    product = models.ForeignKey(Product, related_name="reviews", null=False, blank=False, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name="reviews", null=False, blank=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     content = models.TextField(blank=True, null=True)
-    stars = models.IntegerField()
+    rating = models.IntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
+
+
+def get_rating(self):
+    total = sum(int(review['ratings']) for review in self.reviews.values())
+    return total / self.reviews.count
+
+    

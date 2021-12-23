@@ -251,6 +251,14 @@ input[name='q']::placeholder{
     color:#fff!important;
 }
 
+.notification{
+    margin-top:20px;
+}
+
+.notification.space-below{
+    margin-bottom: 20px;
+}
+
 /*---------------- product form-----------*/
 .btn-file {
     position: relative;
