@@ -272,10 +272,9 @@ The wireframes have been created using balsamique and show for desktop , ipad an
   * This is a one to one relationship that links the customer to the products.  
  
    ## Wireframes
-    Wireframes/Database Tables Link - [Wireframes](Documentation/Wireframes/Wireframes.pdf)
+    Wireframes/Database Tables Link - 
    *Design Changes to Wireframes**
    
-
 
 ## [Surface](#surface)
  design- colour choice

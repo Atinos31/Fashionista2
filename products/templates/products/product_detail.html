@@ -106,6 +106,20 @@
     </div>
 </div>
 </div>
+
+<hr>
+<h2 class="subtitle">Product Reviews</h2>
+<div class="reviews-wrapper">
+    {% for review in product.reviews.all %}
+    <div class="notification">
+        <p>
+            <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }}
+            <strong>Stars</strong> {{ review.stars}}
+        </p>
+        {{ review.content }}
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
 
 {% block page_footer %}
