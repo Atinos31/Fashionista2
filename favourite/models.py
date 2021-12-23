@@ -14,7 +14,7 @@ class Favourite(models.Model):
                                       related_name='product_favourites')
 
     def __str__(self):
-        return f'Favourite ({self.user})'
+        return Favourite, f'({self.user})'
 
 
 class FavouriteItem(models.Model):
