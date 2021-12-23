@@ -38,6 +38,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
+        self.session = request.session
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -98,6 +99,7 @@ def checkout(request):
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
+        self.coupon_id = self.session.get('coupon_id')
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key

@@ -226,11 +226,15 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
    * Here users can update their default information by filling in the form and clicking update info button allowing them to ease purchases at checkout.
    * Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .
  ### Wishlist
-  * The wishlists app allows signed-in users to create one or more wishlists. A user can add a product to their wishlist from the $ product detail page and manage their lists in the account section.
+  * The wishlists app allows signed-in users to create one or more wishlists. A user can add a product to their wishlist from the  product detail page and manage their lists in the account section.
   * When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
+### Coupons
+   * Users can use the coupons to apply for discounts on their orders. The coupons will be valid for users in a certain time frame.
+   * The coupons will not have any limitations in terms of the number of times they can be redeemed and they will be applied to the total value of the shopping cart.
 ### Features left to implement
   * image variations for a particular item
-  * contact page
+  * footer links
+  * wishlist icon changes color and updates quantity of products in the wishlist bag
 
 
 ## [Skeleton](#skeleton)

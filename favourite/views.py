@@ -24,6 +24,9 @@ def favourite(request):
 
     return render(request, 'favourite/favourite.html', context)
 
+    def __len__(self):
+        """ count all the items in the favourites"""
+        return sum(item['quantity'] for item in self.favourite.values())
 
 @login_required
 def add_to_favourite(request, product_id):
@@ -56,3 +59,6 @@ def remove_from_favourite(request, product_id):
     messages.info(request, "A product was removed from your favourites")
 
     return redirect(request.META.get('HTTP_REFERER'))
+
+
+
