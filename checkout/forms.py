@@ -1,6 +1,6 @@
 from django import forms
 from .models import Order
-
+from coupons.models import Coupon
 
 class OrderForm(forms.ModelForm):
     class Meta:
@@ -10,7 +10,8 @@ class OrderForm(forms.ModelForm):
                   'town_or_city', 'postcode', 'country',
                   'province',)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, request, *args, **kwargs):
+      
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
