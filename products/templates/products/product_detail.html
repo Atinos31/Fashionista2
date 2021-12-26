@@ -111,9 +111,30 @@
 <!-- product reviews -->
 {% with reviews.count as total_reviews %}
 <h2>
-    {{ total_reviews }} review {{ total_reviews|pluralize }}
+    {{ total_reviews }} review{{ total_reviews|pluralize }}
 </h2>
-{% endwith %}  
+{% endwith %}
+{% for review in reviews %}
+    <div class="review">
+        <p class="info">
+            Review {{ forloop.counter }} by {{ review.user }}
+            {{ review.created }}
+        </p>
+        {{ review.content|linebreaks }}
+
+    </div>
+{% empty %}
+    <p>There are no reviews yet...</p>
+{% endfor %}
+{% if new_review %}
+    <h2> Your review has been added </h2>
+    <form action="post">
+    {{ review_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" class="btn btn-black" value="Add Review"></p>
+    </form>
+{% endif %}
+
 <!-- Delete Product Modal/ defendive prog -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
     <div class="modal-dialog">

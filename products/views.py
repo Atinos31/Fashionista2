@@ -64,25 +64,24 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    context = {
-        'product': product
-    }
-    reviews = products.review.filter(active=True)
-
+    reviews = product.reviews.filter(active=True)
     new_review = None
     if request.method == 'POST':
-        """ A review was posted """
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():
-            new_review = review_form.save(commit=False)
+            new_review = review_form.save(commit=True)
             new_review.product = product
             new_review.save()
         else:
             review_form = ReviewForm()
 
-    return render(request, 'products/product_detail.html', context, {'reviews': reviews, 'new_review': new_review, 'review_form': review_form})
-
-
+    return render(request, 'products/product_detail.html',
+                  {'product': product,
+                   'reviews': reviews,
+                   'new_review': new_review,
+        
+                   
+                   })
 
 
 @login_required
