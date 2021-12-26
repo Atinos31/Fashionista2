@@ -1,1 +1,1 @@
-web: gunicorn fashionista2.wsgi:application
+web: gunicorn fashionista.wsgi:application
