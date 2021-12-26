@@ -114,9 +114,9 @@
     {{ total_reviews }} review{{ total_reviews|pluralize }}
 </h2>
 {% endwith %}
-{% for review in reviews %}
-    <div class="review">
-        <p class="info">
+{% for review in reviews %} 
+<div class="review">
+    <p class="info">
             Review {{ forloop.counter }} by {{ review.user }}
             {{ review.created }}
         </p>
@@ -128,10 +128,10 @@
 {% endfor %}
 {% if new_review %}
     <h2> Your review has been added </h2>
-    <form action="post">
+    <form action="POST">
     {{ review_form.as_p }}
     {% csrf_token %}
-    <p><input type="submit" class="btn btn-black" value="Add Review"></p>
+    <p><input type="submit" class="btn btn-black" value="Add Review"> Add review</p>
     </form>
 {% endif %}
 

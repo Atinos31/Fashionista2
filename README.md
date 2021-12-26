@@ -417,6 +417,7 @@ https://stripe.com/docs/payments/checkout
 * email confirmation bug - i checked the endpoint urls both in stripe and gitpod , modified sign in stripe secret as stripe_wh_secret in gitpod workspace variable.refresh the page,restarted workspace.checked the webhook handler.py file,  fixed
 * 401 stripe webhook error - changed port 8000 to public
 * ProgrammingError: relation "django_session" does not exist error  ,from stackflow - i ran "python3 manage.py migrate sessions"
+reviewform does not render.
 
 ## Deployment
 
