@@ -2,8 +2,9 @@
 
 --------<br>
 
-![responsiveimage](Documentation/ResponsiveImage.png)
-[View the live site here :]()
+![responsiveimage](Documentation/ResponsiveImage.png) <br>
+
+[View the live site here :](https://fashionista2.herokuapp.com/)
 
 ## OVERVIEW
 Fashionista has been built as the 4th milestone project as part of Code Institute's Full Stack Software Development course.
