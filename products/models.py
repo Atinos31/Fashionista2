@@ -33,17 +33,19 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-
-class ProductReview(models.Model):
+class Review(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
-    content = models.TextField(blank=True, null=True)
-    rating = models.IntegerField()
-    date_added = models.DateTimeField(auto_now_add=True)
+    user = models.CharField(max_length=100)
+    content = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    Updated = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('created',)
 
 
-def get_rating(self):
-    total = sum(int(review['ratings']) for review in self.reviews.values())
-    return total / self.reviews.count
+def __str__(self):
+    return f'comment by {self.name} on {self.product}'
 
     
