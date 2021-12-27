@@ -144,6 +144,7 @@ text-align: center!important;
 /* -------------HomePage -----------------*/
 .homepage {
     background: url('static/media/homepage1.jpg') no-repeat center center fixed;
+    background-color: saddlebrown;
     background-size: cover;
     overflow-x: hidden; 
     height: calc(100vh - 164px);
