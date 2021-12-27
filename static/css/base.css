@@ -141,8 +141,9 @@ text-align: center!important;
 .homepage {
     background: url('/media/homepage1.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height:auto;
     overflow-x: hidden; 
+    max-width:100%;
 }
 
 .homepage-font{
