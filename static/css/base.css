@@ -6,8 +6,8 @@
 }
 
 html{
-    min-height:100%;
-    position:relative;
+    height:100%;
+    
 }
 
 body{
@@ -146,7 +146,7 @@ text-align: center!important;
     background: url('/media/homepage1.jpg') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden; 
-    max-width:100%;
+    height: calc(100vh - 164px);
 }
 
 .homepage-font{
