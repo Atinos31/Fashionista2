@@ -423,6 +423,7 @@ https://stripe.com/docs/payments/checkout
 * 401 stripe webhook error - changed port 8000 to public
 * ProgrammingError: relation "django_session" does not exist error  ,from stackflow - i ran "python3 manage.py migrate sessions"
 reviewform does not render.
+* 400 error from stripe, from cli unbound local variable intent referenced before assignment.
 
 ## Deployment
 
