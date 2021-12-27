@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+if os.path.exists('env.py'):
+    import env
 
 import dj_database_url
 
@@ -25,7 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+
 
 ALLOWED_HOSTS = ['fashionista2.herokuapp.com', 'localhost']
 
@@ -49,12 +52,10 @@ INSTALLED_APPS = [
     'profiles',
     'favourite',
     'coupons',
-  
+
     # other
     'crispy_forms',
     'storages'
-  
-
 ]
 
 MIDDLEWARE = [
