@@ -215,14 +215,9 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
    * Order information which details the order info, delivery details and billing info.
    * Order Summary - Gives a nice overview of each of the products that they are purchasing. Images are links that will take the user back to the product details page for that product.
  * More products link which will take the user back to the all products page encouraging the user to make more purchases.
- ### About us page
-  * Users can find out more about the company by clicking the about us link under the company dropdown (on larger devices), or within the burger menu.
-  * Users are greeted with a hero image with the company mantra about the products.
+ ### review page
+  *users can leave a review on a product.
 
- ### Contact us page
-  * Users can find different ways to contact the company on the contact page. Details for the company address, telephone, email and opening times can be found here.
-  * The next section on this page allows users to contact the company using the form provided. Once the user submits a valid form a success message is displayed to the user to provide feedback and an email confirmation is sent to the user to let them know that we have received their query.
-   * Contact messages can be located on the site administration page (for superusers only).
  ### Profile page
    * Here users can update their default information by filling in the form and clicking update info button allowing them to ease purchases at checkout.
    * Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .

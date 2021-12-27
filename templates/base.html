@@ -10,8 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="Description" content="A fashion e-commerce platform, mainly foccuses on womens wear,but it also offers men's apparel, children's clothes, accessories, shoes, bags and other fashion items">
         <meta name="keywords" content="fashion, women, men, children, accessories,shoes, bags">
-        <meta name="author" content="Sandra Atino">
-        
+        <meta name="author" content="Sandra Atino">  
     {% endblock %}
 
     {% block extra_meta %}
@@ -81,7 +80,6 @@
     
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            
             <li class="list-inline-item">
               <a href="{% url 'favourite' %}" class="text-black nav-link">
                 <div class="text-center">
@@ -97,7 +95,7 @@
               </a>
             </li>
 
-               <li class="list-inline-item dropdown">
+              <li class="list-inline-item dropdown">
               <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div>
@@ -171,19 +169,18 @@
             {% endfor %}
         </div>
     {% endif %}
-    {% block page_header %}
-    {% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-    {% block content %}
-    {% endblock %}
-
+  {% block content %}
+  {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-    {% endblock %}
+{% endblock %}
 
   </body>
 </html>

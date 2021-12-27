@@ -11,20 +11,13 @@ html{
 }
 
 body{
-   /* background: url('/media/homepage1.jpg') no-repeat center center fixed;
-    background-size: cover;*/
-    
     font-family:  'Roboto Slab', serif;
     background-color: #fff;
     margin-bottom:60px;
-    height: calc(100vh - 164px);
+    height:100%;
+    width: 100%;
 
 }
-
-/*.container-lg {
-    min-height: 65vh;
-    width:100%;
-}*/
 
 .text-center{
 text-align: center!important;
@@ -143,11 +136,14 @@ text-align: center!important;
 
 /* -------------HomePage -----------------*/
 .homepage {
-    background: url('static/media/homepage1.jpg') no-repeat center center fixed;
-    background-color: saddlebrown;
+    background: url('/media/homepage1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    overflow-x: hidden; 
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
+    background-color: rgb(59, 208, 228); /* incase homepage image does not render */
+    background-attachment: fixed;
+
 }
 
 .homepage-font{
@@ -170,15 +166,13 @@ text-align: center!important;
    
 }
 
-
-
-
 /*-------------- notification badge-----------*/
 .item{
     position:relative;
     padding-top:20px;
     display:inline-block;
 }
+
 .notify-badge{
     position: absolute;
     right:-15px;
@@ -197,10 +191,10 @@ text-align: center!important;
 .overlay{
     height:100%;
     width:100%;
-    top:0;
+    top:-0;
     left:0;
     position:fixed;
-    background: #fff;
+    background:#fff;
     z-index:-1;
 }
 
@@ -356,15 +350,6 @@ input[name='q']::placeholder{
 }
 
 
-/*---------------------------footer------------------*/
-footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  z-index:-9999;
-}
-
 /*---------------------- profilepage---------------*/
 /* allauth form formating*/
 .allauth-form-inner-content p{
@@ -426,6 +411,21 @@ allauth-form-inner-content button,
 @media(min-width:1200px){
     .container{
         max-width:80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
     }
 }
 
