@@ -2,6 +2,7 @@ from django import forms
 from .models import Order
 from coupons.models import Coupon
 
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
@@ -11,7 +12,6 @@ class OrderForm(forms.ModelForm):
                   'province',)
 
     def __init__(self, request, *args, **kwargs):
-      
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field

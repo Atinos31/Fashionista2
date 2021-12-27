@@ -6,7 +6,6 @@ from django_countries.fields import CountryField
 
 # Create your models here.
 
-
 class UserProfile(models.Model):
     """A  user profile model for maintaining default
     delivery information and order history
@@ -20,7 +19,6 @@ class UserProfile(models.Model):
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True, blank=True)
 
-
     def __str__(self):
         return self.user.username
 
@@ -32,5 +30,5 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     if created:
         UserProfile.objects.create(user=instance)
-    #existing users:just save the profile
+    # existing users:just save the profile
     instance.userprofile.save()

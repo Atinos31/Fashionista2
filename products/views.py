@@ -150,6 +150,3 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
-# add reviews
-
-
