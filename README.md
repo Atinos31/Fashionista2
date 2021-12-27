@@ -1,8 +1,8 @@
 <h1 align="center"> FASHIONISTA </h1><br>
 
---------<br>
+------------------------------------<br>
 
-![responsiveimage](Documentation/ResponsiveImage.png) <br>
+![responsiveimage](documents/fashionistamockup.png) <br>
 
 [View the live site here :](https://fashionista2.herokuapp.com/)
 
@@ -229,13 +229,16 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
  ### Wishlist
   * The wishlists app allows signed-in users to create one or more wishlists. A user can add a product to their wishlist from the  product detail page and manage their lists in the account section.
   * When the used has added products to their wishlist ; they will be displayed here in the same format as the products page.
-### Coupons
-   * Users can use the coupons to apply for discounts on their orders. The coupons will be valid for users in a certain time frame.
-   * The coupons will not have any limitations in terms of the number of times they can be redeemed and they will be applied to the total value of the shopping cart.
+
 ### Features left to implement
   * image variations for a particular item
   * footer links
   * wishlist icon changes color and updates quantity of products in the wishlist bag
+  ### Coupons
+   * Users can use the coupons to apply for discounts on their orders. The coupons will be valid for users in a certain time frame.
+   * The coupons will not have any limitations in terms of the number of times they can be redeemed and they will be applied to the total value of the shopping cart.
+   ### review form
+   * users can write a review
 
 
 ## [Skeleton](#skeleton)
@@ -273,12 +276,13 @@ The wireframes have been created using balsamique and show for desktop , ipad an
   * This is a one to one relationship that links the customer to the products.  
  
    ## Wireframes
-    Wireframes/Database Tables Link - 
+    Wireframes/Database Tables Link - documents folder
    *Design Changes to Wireframes**
    
 
 ## [Surface](#surface)
  design- colour choice
+
 # [Technologies Used In The Project](#technologies)
 
 * Django
@@ -555,7 +559,7 @@ if 'USE_AWS' in os.environ:
 7. Finally, push to GitHub, and all changes should be automatically pushed to Heroku too.
 
 Making a Local Clone:
-In order to make a local clone of the PJC Plant Services website, enter git clone https://github.com/Atinos31/Fashionista2 into the terminal. 
+In order to make a local clone of the fashionista website, enter git clone https://github.com/Atinos31/Fashionista2 into the terminal. 
 
 Next, create an .env.py file in the root directory of the project, and add it to the .gitignore file. 
 The following code needs to be added to the .env.py file:
@@ -588,7 +592,7 @@ python3 manage.py runserver
 ### Code
 
 I used the following links to help my coding:-
-- Code Institue task project for setup and linking to AWS.
+- Code Institue boutique-ado project for setup and linking to AWS.
 - https://stackoverflow.com/ - for various issues when writing queries in Python.
 - https://www.w3schools.com/python/default.asp - for extra help and tuition with Python.
 - https://miniwebtool.com/django-secret-key-generator/ - for generating the secret key
@@ -611,7 +615,7 @@ I used the following links to help my coding:-
 
 Many Thanks to the below for the help and guidances throughout my project:- 
 - My Mentor 
-- Code Institues tutor for increasing my hand in date and being supportive.
+- Code institute tutor support for helping me troubleshoot and fix bugs
 - The peercode channel on slack for feedback on my website. 
 - Student care for offerind me more time when i requested it.
 - Code Institute and the Boutique-Ado Project
