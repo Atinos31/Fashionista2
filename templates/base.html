@@ -77,7 +77,6 @@
             </div>
           </form>
         </div>
-    
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item">
@@ -94,7 +93,6 @@
                 </div>
               </a>
             </li>
-
               <li class="list-inline-item dropdown">
               <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -104,7 +102,6 @@
                   <p class="my-0">My Account</p>
                 </div>
               </a>
-
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
@@ -145,13 +142,9 @@
     </button>
     {% include 'includes/mobile-top-header.html' %}
     {% include 'includes/main-nav.html' %}
-  
-    
   </nav>
 </div>
- 
-    </header>
-    
+</header> 
    {% if messages %}
         <div class="message-container">
             {% for message in messages %}
