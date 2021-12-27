@@ -216,8 +216,11 @@ The Checkout page is split into two columns on larger devices, and 2 rows on sma
    * Order Summary - Gives a nice overview of each of the products that they are purchasing. Images are links that will take the user back to the product details page for that product.
  * More products link which will take the user back to the all products page encouraging the user to make more purchases.
  ### review page
-  *users can leave a review on a product.
+  * users can leave a review on a product by filling the review form below the product detal.
+  * users have to be registered and signed in to access this feature
+  * users may udate / edit their review
 
+  * admin can mark the review inactive if it inappropriate.so its not displayed
  ### Profile page
    * Here users can update their default information by filling in the form and clicking update info button allowing them to ease purchases at checkout.
    * Regarding information aboutuser's past orders, users can click the order number to take them to the checkout success page .

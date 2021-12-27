@@ -108,32 +108,62 @@
 </div>
 </div>
 <hr>
-<!-- product reviews -->
-{% with reviews.count as total_reviews %}
-<h2>
-    {{ total_reviews }} review{{ total_reviews|pluralize }}
-</h2>
-{% endwith %}
-{% for review in reviews %} 
-<div class="review">
-    <p class="info">
-            Review {{ forloop.counter }} by {{ review.user }}
-            {{ review.created }}
-        </p>
-        {{ review.content|linebreaks }}
 
+<!-- Product Reviews-->
+        <div id="product-reviews" class="row bg-light">
+            <div class="col-12 col-md-10 col-lg-4 offset-lg-4 mb-4">
+                <h2 class="text-black font-weight-bold mt-5 mb-4">Product Reviews</h2>
+                {% if request.user.is_authenticated %}
+                    {% if update %}
+                        <!-- Edit Review Form -->
+                        <form method="POST" action="{% url 'update_review' review.id %}#reviews">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-right">
+                                <button class="btn btn-black rounded-0 font-weight-bold" type="submit">Update Review</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <!--Review Form -->
+                        <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-right">
+                                <button class="btn btn-black rounded-0 font-weight-bold" type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                    {% endif %}
+                {% else %}
+                    <p class="small"> Please <a href="{% url 'account_login' %}">Sign In</a> to leave a review.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">  
+                <!-- Showing all product reviews-->
+                {% for review in product.reviews.all %}
+                    <div class="card review-container mt-5">
+                        <!-- Update Review Button-->
+                        {% if review.user == request.user or request.user.is_superuser %}
+                            <div class="card-head text-right">
+                                <a class="btn btn-black rounded-0" href="{% url 'update_review' review.id %}#reviews">
+                                    Update Review
+                                </a>
+                            </div>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="small text-muted"> by {{ review.user }} on {{ review.created|date:"d-m-Y"}}</p>    
+                            <p class="card-text lead">{{ review.content }}</p>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="text-center mt-5">
+                        <p>No reviews for this product yet....</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div> 
     </div>
-{% empty %}
-    <p>There are no reviews yet...</p>
-{% endfor %}
-{% if new_review %}
-    <h2> Your review has been added </h2>
-    <form action="POST">
-    {{ review_form.as_p }}
-    {% csrf_token %}
-    <p><input type="submit" class="btn btn-black" value="Add Review"> Add review</p>
-    </form>
-{% endif %}
 
 <!-- Delete Product Modal/ defendive prog -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
@@ -158,9 +188,6 @@
 </div>
 {% endblock %}
 
-{% block page_footer %}
-{% include 'includes/footer.html' %}
-{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
