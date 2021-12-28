@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -21,18 +22,22 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'cart': json.dumps(request.session.get('cart', {})),
+            'cart': json.dumps(request.session.get('cart')),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
+        messages.error(request, 'Sorry, you payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
+    """
+    A view to retrieve the bag from the session, render the checkout template,
+    render the checkout form and process the checkout.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -50,8 +55,8 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'province': request.POST['province'],
         }
-
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -61,40 +66,31 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products doesn't seem to exist,"
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_cart'))
-
-            # Save the info to the user's profile if all is well
+                    return redirect(reverse('view_bag'))
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
+
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request, "Your cart is empty!")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -106,7 +102,6 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -127,8 +122,8 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, "The Stripe public key seems to be missing, \
+            Have you correctly set the public key in your enviroment?")
 
     template = 'checkout/checkout.html'
     context = {
@@ -142,7 +137,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    A view to render a sucess page on successful customer checkouts.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
