@@ -136,7 +136,7 @@ text-align: center!important;
 
 /* -------------HomePage -----------------*/
 .homepage {
-    background: url('/media/homepage1.jpg');
+    background: url('/static/media/homepage1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
