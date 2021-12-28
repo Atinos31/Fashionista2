@@ -140,7 +140,7 @@ text-align: center!important;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 180px);
     background-color: rgb(59, 208, 228); /* incase homepage image does not render */
     background-attachment: fixed;
 
@@ -191,7 +191,7 @@ text-align: center!important;
 .overlay{
     height:100%;
     width:100%;
-    top:-0;
+    top:0;
     left:0;
     position:fixed;
     background:#fff;

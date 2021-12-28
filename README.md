@@ -272,14 +272,15 @@ The wireframes have been created using balsamique and show for desktop , ipad an
 
 ### Product-user-wishlist
   * This is a one to one relationship that links the customer to the products.  
- 
-   ## Wireframes
-    Wireframes/Database Tables Link - documents folder
-   *Design Changes to Wireframes**
-   
+ * users can add their favourite items to the wishlist by clicking the heart icon below the product
 
 ## [Surface](#surface)
- design- colour choice
+ design- I decided to choose a colour that are easy on the eyes and let the user focus more on the products.
+ Black is used on most of the buttons and  main text color
+ yellow is used as cta button in the trends area.
+ bg-light or light gray has been used as on the navigation.
+ white has been used for body background
+ purple was used on the logo icon to blend in with the homapge photo (trumpet)
 
 # [Technologies Used In The Project](#technologies)
 
@@ -309,9 +310,6 @@ The wireframes have been created using balsamique and show for desktop , ipad an
 
 pdf2png site was used to convert pdf files to png [pdf2png](https://pdf2png.com/)
 
-
- * Balsamique
-   * Balsamiq was used to create the wireframes https://balsamiq.com/
   
 ### Front-End Technologies
 
@@ -342,7 +340,7 @@ https://www.jquery.com/jquery-3.4.1
   * The dashboard uses Google fonts to accentuate certain text. https://fonts.google.com/
 
 * Hover css
-  * hover css has been used as animation for the image hover to improve the UI. https://ianlunn.github.io/Hover/#effects
+  * hover css has been used as animation for the image , icons and navigation animation hover to improve the UI. https://ianlunn.github.io/Hover/#effects
 
 ### Back-End Technologies
 
@@ -422,14 +420,15 @@ https://stripe.com/docs/payments/checkout
 * ProgrammingError: relation "django_session" does not exist error  ,from stackflow - i ran "python3 manage.py migrate sessions"
 reviewform does not render.
 * 400 error from stripe, from cli unbound local variable intent referenced before assignment.
+*  'client_secret': intent.client_secret,  bug at checkout in views.py line 137. i supposed it has something to do with creating a new endpoint for deployed heroku site. so when tested on local environment i get an error. i could nott fix it.
 
 ## Deployment
 
 ### Live Website Link
-
+[fashionista2 live site](https://fashionista2.herokuapp.com/)
 
 ### Repository Link
-
+[github link](https://github.com/Atinos31/Fashionista2)
 
 ### Running Code Locally
 
@@ -512,10 +511,10 @@ else:
 
 15. Disable 'COLLECTSTATIC' with the fillowing code: heroku config:set DISABLE_COLLECTSTATIC=1
 so that Heroku doesn't attempt to collect the static files.
-16. Add ALLOWED_HOSTS = ['pjc-plant-services-ms4.herokuapp.com', 'localhost', '127.0.0.1'] to settings.py.
+16. Add ALLOWED_HOSTS = ['fashionista2.herokuapp.com', 'localhost', '8000'] to settings.py.
 17. Add Stripe environment variables to settings.py.
 18. Push to Heroku using the following command:
-    git push heroku master
+    git push heroku main
 
 Amazon Web Services:
 
@@ -537,8 +536,8 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'ms4-pjc-plant-services'
-    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_STORAGE_BUCKET_NAME = 'fashionista2'
+    AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
@@ -618,7 +617,7 @@ Many Thanks to the below for the help and guidances throughout my project:-
 - The peercode channel on slack for feedback on my website. 
 - Student care for offerind me more time when i requested it.
 - Code Institute and the Boutique-Ado Project
- 
+- Fullstack Wattsapp group for helping me identify bugs and also encouragement.
 
 
    
