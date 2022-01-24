@@ -52,7 +52,8 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'province': request.POST['province'],
         }
-        order_form = OrderForm(form_data)
+
+        order_form = OrderForm(request, form_data)
 
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -63,12 +64,13 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
                     )
-                    order_line_item.save()
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products doesn't seem to exist,"
@@ -81,8 +83,11 @@ def checkout(request):
                 'checkout_success', args=[order.order_number]))
 
         else:
+            print(order_form.non_field_errors())
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            print("Form invalid")
+            
 
     else:
         cart = request.session.get('cart', {})
@@ -98,6 +103,8 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
+
+        # print(intent)
 
         if request.user.is_authenticated:
             try:
